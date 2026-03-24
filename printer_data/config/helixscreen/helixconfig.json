@@ -1,5 +1,8 @@
 {
   "active_printer_id": "voron-v2",
+  "appearance": {
+    "toolhead_style": 4
+  },
   "config_version": 8,
   "dark_mode": true,
   "display": {
