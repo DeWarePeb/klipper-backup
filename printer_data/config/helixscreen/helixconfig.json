@@ -249,6 +249,10 @@
         "hotend": "extruder"
       },
       "leds": {
+        "auto_state": {
+          "enabled": true,
+          "mappings": {}
+        },
         "color_presets": [
           "#FFFFFF",
           "#FFD700",
@@ -261,7 +265,7 @@
         ],
         "last_brightness": 100,
         "last_color": "#FFFFFF",
-        "led_on_at_start": false,
+        "led_on_at_start": true,
         "macro_devices": [],
         "selected": [
           "neopixel chamber_lights"
