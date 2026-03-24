@@ -11,7 +11,7 @@
     "dim_sec": 300,
     "drm_device": "",
     "gcode_3d_enabled": true,
-    "gcode_render_mode": 0,
+    "gcode_render_mode": 2,
     "rotate": 0,
     "sleep_sec": 600
   },
