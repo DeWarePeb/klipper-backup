@@ -208,23 +208,7 @@
             "controller_fan controller_fan",
             "fan_generic nevermore_fan"
           ],
-          "filament_sensors": [
-            "filament_switch_sensor tool_start",
-            "filament_switch_sensor tool_end",
-            "filament_switch_sensor Turtle_1_expanded",
-            "filament_switch_sensor Turtle_1_compressed",
-            "filament_switch_sensor lane1_prep",
-            "filament_switch_sensor lane1_load",
-            "filament_switch_sensor lane2_prep",
-            "filament_switch_sensor lane2_load",
-            "filament_switch_sensor lane3_prep",
-            "filament_switch_sensor lane3_load",
-            "filament_switch_sensor lane4_prep",
-            "filament_switch_sensor lane4_load",
-            "filament_switch_sensor Turtle_1_Hub",
-            "filament_switch_sensor virtual_bypass",
-            "filament_switch_sensor quiet_mode"
-          ],
+          "filament_sensors": [],
           "heaters": [
             "heater_bed",
             "extruder"
@@ -240,10 +224,9 @@
             "temperature_sensor RPi_Temp",
             "temperature_sensor cartographer",
             "temperature_sensor nevermore_intake_VOC",
-            "temperature_sensor nevermore_exhaust",
-            "temperature_sensor Turtle_1"
+            "temperature_sensor nevermore_exhaust"
           ],
-          "timestamp": "2026-05-08T16:01:41Z"
+          "timestamp": "2026-07-11T12:25:03Z"
         },
         "optional": []
       },
