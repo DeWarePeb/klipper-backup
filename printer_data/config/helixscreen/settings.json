@@ -1,9 +1,6 @@
 {
   "active_printer_id": "voron-v2",
-  "appearance": {
-    "toolhead_style": 4
-  },
-  "config_version": 10,
+  "config_version": 21,
   "dark_mode": true,
   "display": {
     "bed_mesh_render_mode": 0,
@@ -12,6 +9,8 @@
     "drm_device": "",
     "gcode_3d_enabled": true,
     "gcode_render_mode": 2,
+    "gpu_3d_blocked": false,
+    "gpu_blur_blocked": false,
     "rotate": 0,
     "sleep_sec": 600,
     "time_format": 1
@@ -28,6 +27,7 @@
       "d": 0.0,
       "e": 1.0,
       "f": 0.0,
+      "recheck_pending": false,
       "valid": false
     },
     "jitter_threshold": 5,
@@ -36,9 +36,6 @@
     "touch_device": ""
   },
   "language": "en",
-  "led": {
-    "selected_strips": null
-  },
   "log_path": "/tmp/helixscreen.log",
   "motion": {
     "jog_mode": 2
@@ -46,29 +43,23 @@
   "print_start_history": {
     "entries": [
       {
-        "phases": {
-          "3": 880
-        },
+        "phases": {},
         "timestamp": 1774301580,
         "total": 880
       },
       {
-        "phases": {
-          "4": 45
-        },
+        "phases": {},
         "timestamp": 1774379886,
         "total": 45
       }
     ]
   },
-  "printer": {
-    "leds": {
-      "startup_brightness": null
-    }
-  },
   "printers": {
     "show_printer_switcher": false,
     "voron-v2": {
+      "appearance": {
+        "toolhead_style": 4
+      },
       "default_macros": {
         "cooldown": "SET_HEATER_TEMPERATURE HEATER=extruder TARGET=0\nSET_HEATER_TEMPERATURE HEATER=heater_bed TARGET=0",
         "load_filament": {
@@ -567,9 +558,7 @@
           ]
         }
       },
-      "probe_sensors": {
-        "sensors": null
-      },
+      "probe_sensors": {},
       "temp_sensors": {
         "bed": "heater_bed",
         "hotend": "extruder"
