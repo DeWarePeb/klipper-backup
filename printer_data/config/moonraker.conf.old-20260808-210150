@@ -139,15 +139,3 @@ type: web
 channel: stable
 repo: prestonbrown/helixscreen
 path: /home/pjotr/helixscreen
-
-[update_manager happy-hare]
-type: git_repo
-path: /home/pjotr/Happy-Hare
-origin: https://github.com/moggieuk/Happy-Hare.git
-primary_branch: main
-managed_services: klipper
-
-[mmu_server]
-enable_file_preprocessor: True
-enable_toolchange_next_pos: True
-update_spoolman_location: True
