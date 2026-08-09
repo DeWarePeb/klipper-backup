@@ -193,31 +193,45 @@
         ],
         "last_snapshot": {
           "fans": [
+            "fan_generic _unit0_fan0",
+            "fan_generic _unit0_fan1",
             "fan",
             "heater_fan hotend_fan",
             "fan_generic bed_fans",
-            "controller_fan controller_fan",
-            "fan_generic nevermore_fan"
+            "controller_fan controller_fan"
           ],
-          "filament_sensors": [],
+          "filament_sensors": [
+            "filament_switch_sensor default:extruder",
+            "filament_switch_sensor default:toolhead",
+            "filament_switch_sensor mmu_entry_0",
+            "filament_switch_sensor mmu_entry_1",
+            "filament_switch_sensor mmu_exit_0",
+            "filament_switch_sensor mmu_exit_1",
+            "filament_switch_sensor unit0:filament_compression",
+            "filament_switch_sensor unit0:filament_tension"
+          ],
           "heaters": [
             "heater_bed",
             "extruder"
           ],
           "leds": [
+            "neopixel _unit0_gate0_leds",
+            "neopixel _unit0_gate1_leds",
+            "neopixel _unit0_gate0_box",
+            "neopixel _unit0_gate1_box",
             "neopixel jw_leds",
             "neopixel chamber_lights"
           ],
           "sensors": [
+            "temperature_sensor _unit0_mcu0",
+            "temperature_sensor _unit0_mcu1",
             "tmc5160 stepper_x",
             "tmc5160 stepper_y",
             "temperature_sensor cartographer_coil",
             "temperature_sensor RPi_Temp",
-            "temperature_sensor cartographer",
-            "temperature_sensor nevermore_intake_VOC",
-            "temperature_sensor nevermore_exhaust"
+            "temperature_sensor cartographer"
           ],
-          "timestamp": "2026-08-08T18:51:24Z"
+          "timestamp": "2026-08-09T20:11:07Z"
         },
         "optional": []
       },
