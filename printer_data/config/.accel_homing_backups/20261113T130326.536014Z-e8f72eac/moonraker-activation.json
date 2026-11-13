@@ -1,0 +1,43 @@
+{
+  "status": "restarted",
+  "service": "moonraker.service",
+  "config": "/home/pjotr/printer_data/config/moonraker.conf",
+  "instance": "b53293981547ecfd",
+  "registration_sha256": "4fca15df0c4dd7facd24f8a647bb9bf2d99d4a0a82c33b1ec416c80bc7ba1080",
+  "identity": {
+    "instance": {
+      "config": "/home/pjotr/printer_data/config/moonraker.conf",
+      "data": "/home/pjotr/printer_data",
+      "socket": "/home/pjotr/printer_data/comms/klippy.sock",
+      "pid": 7028,
+      "start_time": "77718",
+      "service": "moonraker.service",
+      "service_scope": "system",
+      "argv": [
+        "/home/pjotr/moonraker-env/bin/python",
+        "/home/pjotr/moonraker/moonraker/moonraker.py",
+        "-d",
+        "/home/pjotr/printer_data"
+      ],
+      "cwd": "/home/pjotr/moonraker",
+      "path_environment": {
+        "HOME": "/home/pjotr"
+      },
+      "owner_home": "/home/pjotr"
+    },
+    "unit": {
+      "Id": "moonraker.service",
+      "ExecStart": "{ path=/home/pjotr/moonraker-env/bin/python ; argv[]=/home/pjotr/moonraker-env/bin/python $MOONRAKER_ARGS ; ignore_errors=no ; start_time=[Fri 2026-11-13 14:03:27 CET] ; stop_time=[n/a] ; pid=7028 ; code=(null) ; status=0/0 }",
+      "WorkingDirectory": "/home/pjotr/moonraker",
+      "FragmentPath": "/etc/systemd/system/moonraker.service",
+      "DropInPaths": "",
+      "User": "pjotr",
+      "Group": "",
+      "Environment": "",
+      "EnvironmentFiles": "/home/pjotr/printer_data/systemd/moonraker.env (ignore_errors=no)",
+      "MainPID": "7028",
+      "InvocationID": "c9879e54fcfb4f618af128670af8bf9d",
+      "ActiveState": "active"
+    }
+  }
+}
