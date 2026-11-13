@@ -1,0 +1,5025 @@
+{
+  "schema": "accel_homing_troubleshoot_v1",
+  "run_id": "422837f359494894a27c5199cfea291f",
+  "created_utc": "2026-11-13T18:36:10.097871+00:00",
+  "ending": {
+    "result": "aborted",
+    "mode": "troubleshoot",
+    "reason": "accel_homing: trigger at 61.01 mm is materially short of expected center travel 175.00 mm; troubleshoot stopped without automatic return or recalibration; manually recenter before another run",
+    "run_id": "422837f359494894a27c5199cfea291f",
+    "axes": [
+      "y"
+    ],
+    "samples_requested": 50,
+    "attempts": 1,
+    "completed_samples": {
+      "y": 0
+    },
+    "statistics": {
+      "y": null
+    }
+  },
+  "axes": [
+    "y"
+  ],
+  "samples_requested": 50,
+  "fixed_thresholds_g": {
+    "x": 2.5,
+    "y": 1.75
+  },
+  "configured_speeds_mm_s": {
+    "y": 60.0
+  },
+  "environment": {
+    "python": "3.11.2 (main, Apr  8 2026, 01:58:00) [GCC 12.2.0]",
+    "platform": "Linux-6.12.93+rpt-rpi-v8-aarch64-with-glibc2.36",
+    "effective_config_sections": {
+      "mcu": {
+        "serial": "/dev/serial/by-id/usb-Klipper_stm32f446xx_290039000751303532383235-if00",
+        "baud": 250000,
+        "restart_method": "command"
+      },
+      "mcu nhk": {
+        "serial": "/dev/serial/by-id/usb-Klipper_rp2040_3232323236198987-if00",
+        "baud": 250000,
+        "restart_method": "command"
+      },
+      "mcu cartographer": {
+        "serial": "/dev/serial/by-id/usb-Cartographer_stm32g431xx_610038000550315551333620-if00",
+        "baud": 250000,
+        "restart_method": "command"
+      },
+      "tmc2209 extruder": {
+        "uart_pin": "nhk:gpio0",
+        "tx_pin": "nhk:gpio1",
+        "uart_address": 0,
+        "run_current": 0.6,
+        "hold_current": 2.0,
+        "sense_resistor": 0.1,
+        "interpolate": false,
+        "driver_multistep_filt": true,
+        "driver_toff": 3,
+        "driver_hstrt": 5,
+        "driver_hend": 0,
+        "driver_tbl": 2,
+        "driver_semin": 0,
+        "driver_seup": 0,
+        "driver_semax": 0,
+        "driver_sedn": 0,
+        "driver_seimin": 0,
+        "driver_iholddelay": 8,
+        "driver_pwm_ofs": 36,
+        "driver_pwm_grad": 14,
+        "driver_pwm_freq": 1,
+        "driver_pwm_autoscale": true,
+        "driver_pwm_autograd": true,
+        "driver_freewheel": 0,
+        "driver_pwm_reg": 8,
+        "driver_pwm_lim": 12,
+        "driver_tpowerdown": 20,
+        "driver_sgthrs": 0
+      },
+      "tmc5160 stepper_x": {
+        "cs_pin": "PE15",
+        "spi_speed": 4000000,
+        "spi_software_sclk_pin": "PE12",
+        "spi_software_miso_pin": "PE13",
+        "spi_software_mosi_pin": "PE14",
+        "run_current": 1.75,
+        "hold_current": 10.0,
+        "sense_resistor": 0.075,
+        "interpolate": true,
+        "driver_mslut0": 2863314260,
+        "driver_mslut1": 1251300522,
+        "driver_mslut2": 608774441,
+        "driver_mslut3": 269500962,
+        "driver_mslut4": 4227858431,
+        "driver_mslut5": 3048961917,
+        "driver_mslut6": 1227445590,
+        "driver_mslut7": 4211234,
+        "driver_w0": 2,
+        "driver_w1": 1,
+        "driver_w2": 1,
+        "driver_w3": 1,
+        "driver_x1": 128,
+        "driver_x2": 255,
+        "driver_x3": 255,
+        "driver_start_sin": 0,
+        "driver_start_sin90": 247,
+        "stealthchop_threshold": 0.0,
+        "driver_multistep_filt": true,
+        "driver_toff": 3,
+        "driver_hstrt": 5,
+        "driver_hend": 2,
+        "driver_fd3": 0,
+        "driver_disfdcc": 0,
+        "driver_chm": 0,
+        "driver_tbl": 2,
+        "driver_vhighfs": 0,
+        "driver_vhighchm": 0,
+        "driver_tpfd": 4,
+        "driver_diss2g": 0,
+        "driver_diss2vs": 0,
+        "driver_semin": 0,
+        "driver_seup": 0,
+        "driver_semax": 0,
+        "driver_sedn": 0,
+        "driver_seimin": 0,
+        "driver_sgt": 1,
+        "driver_sfilt": 0,
+        "driver_drvstrength": 0,
+        "driver_bbmclks": 4,
+        "driver_bbmtime": 0,
+        "driver_filt_isense": 0,
+        "driver_iholddelay": 6,
+        "driver_pwm_ofs": 30,
+        "driver_pwm_grad": 0,
+        "driver_pwm_freq": 0,
+        "driver_pwm_autoscale": true,
+        "driver_pwm_autograd": true,
+        "driver_freewheel": 0,
+        "driver_pwm_reg": 4,
+        "driver_pwm_lim": 12,
+        "driver_tpowerdown": 10
+      },
+      "stepper_x": {
+        "microsteps": 16,
+        "endstop_pin": "accel_homing:x",
+        "position_endstop": 350.0,
+        "position_min": 0.0,
+        "position_max": 350.0,
+        "homing_speed": 60.0,
+        "second_homing_speed": 30.0,
+        "homing_retract_speed": 60.0,
+        "homing_retract_dist": 0.0,
+        "homing_positive_dir": true,
+        "step_pin": "PB10",
+        "dir_pin": "!PB11",
+        "rotation_distance": 40.0,
+        "full_steps_per_rotation": 200,
+        "gear_ratio": [],
+        "enable_pin": "!PG0"
+      },
+      "tmc5160 stepper_y": {
+        "cs_pin": "PE11",
+        "spi_speed": 4000000,
+        "spi_software_sclk_pin": "PE12",
+        "spi_software_miso_pin": "PE13",
+        "spi_software_mosi_pin": "PE14",
+        "run_current": 1.75,
+        "hold_current": 10.0,
+        "sense_resistor": 0.075,
+        "interpolate": true,
+        "driver_mslut0": 2863314260,
+        "driver_mslut1": 1251300522,
+        "driver_mslut2": 608774441,
+        "driver_mslut3": 269500962,
+        "driver_mslut4": 4227858431,
+        "driver_mslut5": 3048961917,
+        "driver_mslut6": 1227445590,
+        "driver_mslut7": 4211234,
+        "driver_w0": 2,
+        "driver_w1": 1,
+        "driver_w2": 1,
+        "driver_w3": 1,
+        "driver_x1": 128,
+        "driver_x2": 255,
+        "driver_x3": 255,
+        "driver_start_sin": 0,
+        "driver_start_sin90": 247,
+        "stealthchop_threshold": 0.0,
+        "driver_multistep_filt": true,
+        "driver_toff": 3,
+        "driver_hstrt": 5,
+        "driver_hend": 2,
+        "driver_fd3": 0,
+        "driver_disfdcc": 0,
+        "driver_chm": 0,
+        "driver_tbl": 2,
+        "driver_vhighfs": 0,
+        "driver_vhighchm": 0,
+        "driver_tpfd": 4,
+        "driver_diss2g": 0,
+        "driver_diss2vs": 0,
+        "driver_semin": 0,
+        "driver_seup": 0,
+        "driver_semax": 0,
+        "driver_sedn": 0,
+        "driver_seimin": 0,
+        "driver_sgt": 1,
+        "driver_sfilt": 0,
+        "driver_drvstrength": 0,
+        "driver_bbmclks": 4,
+        "driver_bbmtime": 0,
+        "driver_filt_isense": 0,
+        "driver_iholddelay": 6,
+        "driver_pwm_ofs": 30,
+        "driver_pwm_grad": 0,
+        "driver_pwm_freq": 0,
+        "driver_pwm_autoscale": true,
+        "driver_pwm_autograd": true,
+        "driver_freewheel": 0,
+        "driver_pwm_reg": 4,
+        "driver_pwm_lim": 12,
+        "driver_tpowerdown": 10
+      },
+      "stepper_y": {
+        "microsteps": 16,
+        "endstop_pin": "accel_homing:y",
+        "position_endstop": 350.0,
+        "position_min": -5.0,
+        "position_max": 355.0,
+        "homing_speed": 60.0,
+        "second_homing_speed": 30.0,
+        "homing_retract_speed": 60.0,
+        "homing_retract_dist": 0.0,
+        "homing_positive_dir": true,
+        "step_pin": "PF15",
+        "dir_pin": "!PF14",
+        "rotation_distance": 40.0,
+        "full_steps_per_rotation": 200,
+        "gear_ratio": [],
+        "enable_pin": "!PE9"
+      },
+      "tmc2209 stepper_z": {
+        "uart_pin": "PD5",
+        "uart_address": 0,
+        "run_current": 0.8,
+        "hold_current": 2.0,
+        "sense_resistor": 0.11,
+        "interpolate": true,
+        "stealthchop_threshold": 0.0,
+        "driver_multistep_filt": true,
+        "driver_toff": 3,
+        "driver_hstrt": 5,
+        "driver_hend": 0,
+        "driver_tbl": 2,
+        "driver_semin": 0,
+        "driver_seup": 0,
+        "driver_semax": 0,
+        "driver_sedn": 0,
+        "driver_seimin": 0,
+        "driver_iholddelay": 8,
+        "driver_pwm_ofs": 36,
+        "driver_pwm_grad": 14,
+        "driver_pwm_freq": 1,
+        "driver_pwm_autoscale": true,
+        "driver_pwm_autograd": true,
+        "driver_freewheel": 0,
+        "driver_pwm_reg": 8,
+        "driver_pwm_lim": 12,
+        "driver_tpowerdown": 20,
+        "driver_sgthrs": 0
+      },
+      "stepper_z": {
+        "microsteps": 32,
+        "endstop_pin": "probe:z_virtual_endstop",
+        "position_min": -5.0,
+        "position_max": 330.0,
+        "homing_speed": 8.0,
+        "second_homing_speed": 3.0,
+        "homing_retract_speed": 8.0,
+        "homing_retract_dist": 0.0,
+        "homing_positive_dir": false,
+        "step_pin": "PD4",
+        "dir_pin": "!PD3",
+        "rotation_distance": 40.0,
+        "full_steps_per_rotation": 200,
+        "gear_ratio": [
+          [
+            80.0,
+            16.0
+          ]
+        ],
+        "enable_pin": "!PD7"
+      },
+      "tmc2209 stepper_z1": {
+        "uart_pin": "PD0",
+        "uart_address": 0,
+        "run_current": 0.8,
+        "hold_current": 2.0,
+        "sense_resistor": 0.11,
+        "interpolate": true,
+        "stealthchop_threshold": 0.0,
+        "driver_multistep_filt": true,
+        "driver_toff": 3,
+        "driver_hstrt": 5,
+        "driver_hend": 0,
+        "driver_tbl": 2,
+        "driver_semin": 0,
+        "driver_seup": 0,
+        "driver_semax": 0,
+        "driver_sedn": 0,
+        "driver_seimin": 0,
+        "driver_iholddelay": 8,
+        "driver_pwm_ofs": 36,
+        "driver_pwm_grad": 14,
+        "driver_pwm_freq": 1,
+        "driver_pwm_autoscale": true,
+        "driver_pwm_autograd": true,
+        "driver_freewheel": 0,
+        "driver_pwm_reg": 8,
+        "driver_pwm_lim": 12,
+        "driver_tpowerdown": 20,
+        "driver_sgthrs": 0
+      },
+      "stepper_z1": {
+        "microsteps": 32,
+        "step_pin": "PC12",
+        "dir_pin": "PC11",
+        "rotation_distance": 40.0,
+        "full_steps_per_rotation": 200,
+        "gear_ratio": [
+          [
+            80.0,
+            16.0
+          ]
+        ],
+        "enable_pin": "!PD2"
+      },
+      "tmc2209 stepper_z2": {
+        "uart_pin": "PA8",
+        "uart_address": 0,
+        "run_current": 0.8,
+        "hold_current": 2.0,
+        "sense_resistor": 0.11,
+        "interpolate": true,
+        "stealthchop_threshold": 0.0,
+        "driver_multistep_filt": true,
+        "driver_toff": 3,
+        "driver_hstrt": 5,
+        "driver_hend": 0,
+        "driver_tbl": 2,
+        "driver_semin": 0,
+        "driver_seup": 0,
+        "driver_semax": 0,
+        "driver_sedn": 0,
+        "driver_seimin": 0,
+        "driver_iholddelay": 8,
+        "driver_pwm_ofs": 36,
+        "driver_pwm_grad": 14,
+        "driver_pwm_freq": 1,
+        "driver_pwm_autoscale": true,
+        "driver_pwm_autograd": true,
+        "driver_freewheel": 0,
+        "driver_pwm_reg": 8,
+        "driver_pwm_lim": 12,
+        "driver_tpowerdown": 20,
+        "driver_sgthrs": 0
+      },
+      "stepper_z2": {
+        "microsteps": 32,
+        "step_pin": "PC9",
+        "dir_pin": "!PC8",
+        "rotation_distance": 40.0,
+        "full_steps_per_rotation": 200,
+        "gear_ratio": [
+          [
+            80.0,
+            16.0
+          ]
+        ],
+        "enable_pin": "!PC10"
+      },
+      "tmc2209 stepper_z3": {
+        "uart_pin": "PG8",
+        "uart_address": 0,
+        "run_current": 0.8,
+        "hold_current": 2.0,
+        "sense_resistor": 0.11,
+        "interpolate": true,
+        "stealthchop_threshold": 0.0,
+        "driver_multistep_filt": true,
+        "driver_toff": 3,
+        "driver_hstrt": 5,
+        "driver_hend": 0,
+        "driver_tbl": 2,
+        "driver_semin": 0,
+        "driver_seup": 0,
+        "driver_semax": 0,
+        "driver_sedn": 0,
+        "driver_seimin": 0,
+        "driver_iholddelay": 8,
+        "driver_pwm_ofs": 36,
+        "driver_pwm_grad": 14,
+        "driver_pwm_freq": 1,
+        "driver_pwm_autoscale": true,
+        "driver_pwm_autograd": true,
+        "driver_freewheel": 0,
+        "driver_pwm_reg": 8,
+        "driver_pwm_lim": 12,
+        "driver_tpowerdown": 20,
+        "driver_sgthrs": 0
+      },
+      "stepper_z3": {
+        "microsteps": 32,
+        "step_pin": "PG7",
+        "dir_pin": "PG6",
+        "rotation_distance": 40.0,
+        "full_steps_per_rotation": 200,
+        "gear_ratio": [
+          [
+            80.0,
+            16.0
+          ]
+        ],
+        "enable_pin": "!PC7"
+      },
+      "cartographer": {
+        "mcu": "cartographer",
+        "x_offset": 0.0,
+        "y_offset": 21.65,
+        "z_backlash": 0.05,
+        "travel_speed": 50,
+        "lift_speed": 5,
+        "verbose": true,
+        "register_as_probe": true
+      },
+      "adxl345": {
+        "axes_map": [
+          "y",
+          "-x",
+          "z"
+        ],
+        "rate": 3200,
+        "cs_pin": "cartographer:PA0",
+        "spi_speed": 5000000,
+        "spi_bus": "spi1"
+      },
+      "printer": {
+        "kinematics": "corexy",
+        "max_velocity": 600.0,
+        "max_accel": 30000.0,
+        "minimum_cruise_ratio": 0.5,
+        "square_corner_velocity": 5.0,
+        "max_z_velocity": 30.0,
+        "max_z_accel": 150.0
+      },
+      "accel_homing": {
+        "accel_chip": "adxl345",
+        "beacon": "beacon",
+        "threshold": 8.0,
+        "x_threshold": "2.5",
+        "y_threshold": "1.75",
+        "x_impact_sign": 0,
+        "y_impact_sign": 0,
+        "homing_accel": 5000.0,
+        "back_off_dist": 5.0,
+        "baseline_batches": 25,
+        "baseline_time": 0.1,
+        "baseline_noise_floor": 0.7,
+        "enable_settle_time": 0.25,
+        "stream_timeout": 0.05,
+        "travel_margin": 1.1,
+        "watchdog_margin": 0.15,
+        "stream_interval": 0.005,
+        "max_sample_age": 0.07,
+        "min_sample_rate": 1000.0,
+        "sensor_range": 16.0,
+        "model": "default",
+        "calibration_start_threshold": 1.0,
+        "calibration_step": 0.25,
+        "calibration_confirm_timeout": 300.0,
+        "calibration_travel_tolerance": 0.2,
+        "workflow_reposition_speed": 50.0,
+        "calibration_settle_time": 0.25,
+        "charts_directory": "/home/pjotr/printer_data/config/accel_homing_charts"
+      },
+      "accel_homing_model default": {
+        "version": 1,
+        "x_threshold": 2.5,
+        "x_successes": 10,
+        "x_metadata": "{\"run_id\":\"f89d3b49bab9473486468a988dc6df86\",\"sensor\":\"adxl345\",\"backend\":\"klipper_batch\",\"sensor_axes_map\":[[0,37.010297099999995],[1,37.010297099999995],[2,38.3047749]],\"geometry\":{\"minimum\":0.0,\"maximum\":350.0,\"endstop\":350.0,\"positive_dir\":true,\"center\":175.0},\"homing_speed_mm_s\":60.0,\"homing_accel_mm_s2\":5000.0,\"impact_sign\":0,\"polarity_policy\":\"absolute_after_reference_subtraction_v1\",\"signal_quality\":[{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"capture\",\"native_clip_decode\":null,\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"reference_signal_quality\":{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"stationary_reference\",\"native_clip_decode\":null,\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0}}},{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"capture\",\"native_clip_decode\":null,\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"reference_signal_quality\":{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"stationary_reference\",\"native_clip_decode\":null,\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0}}},{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"capture\",\"native_clip_decode\":null,\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"reference_signal_quality\":{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"stationary_reference\",\"native_clip_decode\":null,\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0}}},{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"capture\",\"native_clip_decode\":null,\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"reference_signal_quality\":{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"stationary_reference\",\"native_clip_decode\":null,\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0}}},{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"capture\",\"native_clip_decode\":null,\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"reference_signal_quality\":{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"stationary_reference\",\"native_clip_decode\":null,\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0}}},{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"capture\",\"native_clip_decode\":null,\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"reference_signal_quality\":{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"stationary_reference\",\"native_clip_decode\":null,\"clipped_axis_values\":0,\"clipped_axis_counts\":",
+        "y_threshold": 3.5,
+        "y_successes": 10,
+        "y_metadata": "{\"run_id\":\"6e84f44e130d446c8ff23500bce10727\",\"sensor\":\"adxl345\",\"backend\":\"klipper_batch\",\"sensor_axes_map\":[[1,37.010297099999995],[0,-37.010297099999995],[2,38.3047749]],\"geometry\":{\"minimum\":-5.0,\"maximum\":355.0,\"endstop\":350.0,\"positive_dir\":true,\"center\":175.0},\"homing_speed_mm_s\":60.0,\"homing_accel_mm_s2\":5000.0,\"impact_sign\":0,\"polarity_policy\":\"absolute_after_reference_subtraction_v1\",\"signal_quality\":[{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"capture\",\"native_clip_decode\":null,\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"reference_signal_quality\":{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"stationary_reference\",\"native_clip_decode\":null,\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0}}},{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"capture\",\"native_clip_decode\":null,\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"reference_signal_quality\":{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"stationary_reference\",\"native_clip_decode\":null,\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0}}},{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"capture\",\"native_clip_decode\":null,\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"reference_signal_quality\":{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"stationary_reference\",\"native_clip_decode\":null,\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0}}},{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"capture\",\"native_clip_decode\":null,\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"reference_signal_quality\":{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"stationary_reference\",\"native_clip_decode\":null,\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0}}},{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"capture\",\"native_clip_decode\":null,\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"reference_signal_quality\":{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"stationary_reference\",\"native_clip_decode\":null,\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0}}},{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"capture\",\"native_clip_decode\":null,\"range_limit_axis_values\":0,\"range_limit_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"clipped_axis_values\":0,\"clipped_axis_counts\":{\"x\":0,\"y\":0,\"z\":0},\"reference_signal_quality\":{\"amplitude_limited\":false,\"excess_amplitude_unknown\":false,\"peak_semantics\":\"reported_sensor_derived\",\"signal_scope\":\"stationary_reference\",\"native_clip_decode\":null,\"clipped_axis_values\":0,\"clipped_axis_counts"
+      }
+    },
+    "config_available": true,
+    "host_status": {
+      "state": "ready",
+      "state_message": "Printer is ready"
+    },
+    "sensor": {
+      "name": "adxl345",
+      "backend": "klipper_batch",
+      "backend_type": "ConfiguredAccelBackend",
+      "helper_type": "BatchBulkHelper",
+      "configured_sensor_class": "extras.adxl345.ADXL345",
+      "configured_sensor_cached": {
+        "name": "adxl345",
+        "data_rate": 3200,
+        "rate": null,
+        "axes_map": [
+          [
+            1,
+            37.010297099999995
+          ],
+          [
+            0,
+            -37.010297099999995
+          ],
+          [
+            2,
+            38.3047749
+          ]
+        ],
+        "full_scale": null,
+        "rest_ticks": null
+      },
+      "cached_backend": {
+        "name": "adxl345",
+        "sensor_name": null,
+        "chip": null,
+        "data_rate": null,
+        "rate": 3200.0,
+        "scale": null,
+        "axes_map": null
+      }
+    },
+    "model": {
+      "name": "default",
+      "section": "accel_homing_model default",
+      "metadata": {
+        "x": {
+          "run_id": "f89d3b49bab9473486468a988dc6df86",
+          "sensor": "adxl345",
+          "backend": "klipper_batch",
+          "sensor_axes_map": [
+            [
+              0,
+              37.010297099999995
+            ],
+            [
+              1,
+              37.010297099999995
+            ],
+            [
+              2,
+              38.3047749
+            ]
+          ],
+          "geometry": {
+            "minimum": 0.0,
+            "maximum": 350.0,
+            "endstop": 350.0,
+            "positive_dir": true,
+            "center": 175.0
+          },
+          "homing_speed_mm_s": 60.0,
+          "homing_accel_mm_s2": 5000.0,
+          "impact_sign": 0,
+          "polarity_policy": "absolute_after_reference_subtraction_v1",
+          "signal_quality": [
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            }
+          ],
+          "created_utc": "2026-11-13T13:20:26.289196+00:00",
+          "expected_center_travel_mm": 175.0,
+          "travel_tolerance_fraction": 0.2,
+          "min_commanded_travel_mm": 174.9875,
+          "max_commanded_travel_mm": 175.41250000000002,
+          "repeatability_spread_mm": 0.425,
+          "repeatability_limit_mm": 2.0,
+          "calibration_algorithm": "impact20_vector_v2",
+          "impact_metric": "xyz_magnitude",
+          "minimum_impact_travel_mm": 20.0,
+          "discovery_impact_required": true,
+          "recenter_policy": "selected_axis_midpoint",
+          "travel_plausibility_required": true,
+          "recenter_acceleration_policy": "restored_normal_limit",
+          "onset_g": [
+            15.61,
+            10.99,
+            9.36,
+            14.43,
+            15.83,
+            10.21,
+            6.85,
+            10.15,
+            3.47,
+            10.07
+          ],
+          "impact_peak_g": [
+            15.61,
+            10.99,
+            9.36,
+            14.43,
+            15.83,
+            10.21,
+            6.85,
+            10.15,
+            11.83,
+            10.07
+          ],
+          "calibration_start_threshold_g": 1.0,
+          "calibration_step_g": 0.25,
+          "tested_threshold_g": 2.0,
+          "saved_threshold_g": 2.5,
+          "threshold_margin_g": 0.5,
+          "saved_threshold_tested": false,
+          "calibration_quiet_range_enforced": false,
+          "calibration_settle_time_s": 0.25,
+          "recovery": {
+            "count": 4,
+            "last_return_mm_signed": -1.8625,
+            "accounting": "completed_commanded_returns",
+            "physical_position_verified": false
+          },
+          "physical_position_verified": false,
+          "stationary_noise_seed": {
+            "run_id": "f89d3b49bab9473486468a988dc6df86",
+            "source": "stationary_noise",
+            "impact_metric": "xyz_magnitude",
+            "noise_magnitude_peak_g": 0.11617332025704336,
+            "required_threshold_g": 1.0,
+            "start_threshold_g": 1.0,
+            "configured_start_g": 1.0,
+            "candidate_step_g": 0.25,
+            "threshold_limit_g": 12.8,
+            "margin_factor": 1.2,
+            "margin_g": 0.1
+          },
+          "stationary_noise_measurement": {
+            "run_id": "f89d3b49bab9473486468a988dc6df86",
+            "iterations": 3,
+            "impact_metric": "xyz_magnitude",
+            "noise_magnitude_peak_g": 0.11617332025704336,
+            "initial_threshold_source": "stationary_noise",
+            "start_threshold_g": 1.0,
+            "acquisition_faults": [],
+            "summary_paths": {}
+          }
+        },
+        "y": {
+          "run_id": "6e84f44e130d446c8ff23500bce10727",
+          "sensor": "adxl345",
+          "backend": "klipper_batch",
+          "sensor_axes_map": [
+            [
+              1,
+              37.010297099999995
+            ],
+            [
+              0,
+              -37.010297099999995
+            ],
+            [
+              2,
+              38.3047749
+            ]
+          ],
+          "geometry": {
+            "minimum": -5.0,
+            "maximum": 355.0,
+            "endstop": 350.0,
+            "positive_dir": true,
+            "center": 175.0
+          },
+          "homing_speed_mm_s": 60.0,
+          "homing_accel_mm_s2": 5000.0,
+          "impact_sign": 0,
+          "polarity_policy": "absolute_after_reference_subtraction_v1",
+          "signal_quality": [
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "capture",
+              "native_clip_decode": null,
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            }
+          ],
+          "created_utc": "2026-11-13T17:58:11.693274+00:00",
+          "expected_center_travel_mm": 175.0,
+          "travel_tolerance_fraction": 0.2,
+          "min_commanded_travel_mm": 177.2375,
+          "max_commanded_travel_mm": 178.8375,
+          "repeatability_spread_mm": 1.6,
+          "repeatability_limit_mm": 2.0,
+          "calibration_algorithm": "impact20_vector_v2",
+          "impact_metric": "xyz_magnitude",
+          "minimum_impact_travel_mm": 20.0,
+          "discovery_impact_required": true,
+          "recenter_policy": "selected_axis_midpoint",
+          "travel_plausibility_required": true,
+          "recenter_acceleration_policy": "restored_normal_limit",
+          "onset_g": [
+            3.0,
+            4.05,
+            5.29,
+            15.98,
+            3.69,
+            3.83,
+            3.12,
+            3.1,
+            3.51,
+            3.62
+          ],
+          "impact_peak_g": [
+            18.03,
+            24.79,
+            17.19,
+            23.3,
+            21.88,
+            3.83,
+            18.43,
+            24.06,
+            18.69,
+            17.95
+          ],
+          "calibration_start_threshold_g": 1.0,
+          "calibration_step_g": 0.25,
+          "tested_threshold_g": 3.0,
+          "saved_threshold_g": 3.5,
+          "threshold_margin_g": 0.5,
+          "saved_threshold_tested": false,
+          "calibration_quiet_range_enforced": false,
+          "calibration_settle_time_s": 0.25,
+          "recovery": {
+            "count": 4,
+            "last_return_mm_signed": -122.325,
+            "accounting": "completed_commanded_returns",
+            "physical_position_verified": false
+          },
+          "physical_position_verified": false,
+          "stationary_noise_seed": {
+            "run_id": "6e84f44e130d446c8ff23500bce10727",
+            "source": "stationary_noise",
+            "impact_metric": "xyz_magnitude",
+            "noise_magnitude_peak_g": 0.13480472559417922,
+            "required_threshold_g": 1.0,
+            "start_threshold_g": 1.0,
+            "configured_start_g": 1.0,
+            "candidate_step_g": 0.25,
+            "threshold_limit_g": 12.8,
+            "margin_factor": 1.2,
+            "margin_g": 0.1
+          },
+          "stationary_noise_measurement": {
+            "run_id": "6e84f44e130d446c8ff23500bce10727",
+            "iterations": 3,
+            "impact_metric": "xyz_magnitude",
+            "noise_magnitude_peak_g": 0.13480472559417922,
+            "initial_threshold_source": "stationary_noise",
+            "start_threshold_g": 1.0,
+            "acquisition_faults": [],
+            "summary_paths": {}
+          }
+        }
+      },
+      "thresholds": {
+        "x": 2.5,
+        "y": 3.5
+      }
+    },
+    "workflow": {
+      "reposition_speed_mm_s": 50.0,
+      "settle_time_s": 0.25,
+      "travel_tolerance": 0.2
+    }
+  },
+  "installed_identity": {
+    "source_files": [
+      {
+        "path": "/home/pjotr/accel_homing/accel_homing.py",
+        "size": 266,
+        "sha256": "fdd2297ff62c2c92357ba091d478cb7636816790a53d2d13aa2b7a0f0f90828f"
+      },
+      {
+        "path": "/home/pjotr/accel_homing/accel_homing_backends.py",
+        "size": 29145,
+        "sha256": "80f1ecfe17146843e3a67fe471229c9c2f15d51fdbad1afbd14c9c62ac3e4991"
+      },
+      {
+        "path": "/home/pjotr/accel_homing/accel_homing_charts.py",
+        "size": 87553,
+        "sha256": "b401d9dc873e439ce8e0683e0e4752fd536c50e93c6085a6790dea8480b3721a"
+      },
+      {
+        "path": "/home/pjotr/accel_homing/accel_homing_model.py",
+        "size": 2289,
+        "sha256": "62c4002ef3001547619da8baa854a0bfc6ca65030b96e70ea587df7672ee9294"
+      },
+      {
+        "path": "/home/pjotr/accel_homing/accel_homing_troubleshoot.py",
+        "size": 38900,
+        "sha256": "9e7e5706fe1bda8264afd5d1c36afc1e4e5293798d4bf5825aecdc83d6bb6e93"
+      },
+      {
+        "path": "/home/pjotr/accel_homing/accel_homing_updater.py",
+        "size": 42745,
+        "sha256": "4c2e2e6e6a7572c86673ea21344d3cde295517cc3e516fcef606496ea90beb1d"
+      },
+      {
+        "path": "/home/pjotr/accel_homing/accel_homing_workflows.py",
+        "size": 207804,
+        "sha256": "aa851e326427cc06398066373174ce96adf8a789f2c4f34344fa8d75ba61f5be"
+      },
+      {
+        "path": "/home/pjotr/accel_homing/beacon_accel_homing.py",
+        "size": 205657,
+        "sha256": "01d87df92a573761ad35d3921424661263b9f68a582f305e896c9795dacc6e00"
+      },
+      {
+        "path": "/home/pjotr/klipper/klippy/clocksync.py",
+        "size": 11460,
+        "sha256": "79fdf3556dd6afe14e10963699bf6c73e56eb6cad765e9566a90b408781ee37e"
+      },
+      {
+        "path": "/home/pjotr/klipper/klippy/extras/adxl345.py",
+        "size": 14336,
+        "sha256": "2facda528a8a817df26d370d98b9e13b083cbd25ca3743e0231e8fd52b3d3c9d"
+      },
+      {
+        "path": "/home/pjotr/klipper/klippy/extras/bulk_sensor.py",
+        "size": 13392,
+        "sha256": "d96fc79e438ea32c56fa34c4700e66c3ac24a7710ef17592630019dcfcea30d8"
+      },
+      {
+        "path": "/home/pjotr/klipper/klippy/extras/homing.py",
+        "size": 16748,
+        "sha256": "46f4adddb8f311af829dcaa8e2cd1c2ac3eaabf228384a6df934efb9e4bd87e0"
+      },
+      {
+        "path": "/home/pjotr/klipper/klippy/kinematics/corexy.py",
+        "size": 4273,
+        "sha256": "0c2db1d8c0ab6aa00a0efd7142584f7879e53e5f6b1f45a1b1d386bef3ccbcd6"
+      },
+      {
+        "path": "/home/pjotr/klipper/klippy/klippy.py",
+        "size": 15883,
+        "sha256": "aa9eb47fbe3598fc814d40ed8e0b2b814a0af459fca7acab6732c59bf42e4659"
+      },
+      {
+        "path": "/home/pjotr/klipper/klippy/mcu.py",
+        "size": 58954,
+        "sha256": "d24971313bf30b47e4cb8ffeeb74d3f4bcdfbbbd3f552a04332b7fe609f92d85"
+      },
+      {
+        "path": "/home/pjotr/klipper/klippy/stepper.py",
+        "size": 22576,
+        "sha256": "5e757cc94ebf4db4c992319776fa0b027d052b66a4fa3f200fcbe69b9a5ce9ff"
+      },
+      {
+        "path": "/home/pjotr/klipper/klippy/toolhead.py",
+        "size": 28868,
+        "sha256": "911d675604003f9cffc1356562de17c85c9bead3d744e53922a0d77d5dee1e3b"
+      },
+      {
+        "path": "/home/pjotr/klippy-env/lib/python3.11/site-packages/cartographer/adapters/klipper/homing.py",
+        "size": 935,
+        "sha256": "3e9a1985956c41b2b2d9e86dcb7de0e4a7b08604b797144c70acf7ca124efc35"
+      },
+      {
+        "path": "/home/pjotr/klippy-env/lib/python3.11/site-packages/cartographer/adapters/klipper/toolhead.py",
+        "size": 782,
+        "sha256": "b090267c0483baab4a20727ceb07bfce285dc7b012c3fe073881b4a2ac13b290"
+      },
+      {
+        "path": "/home/pjotr/klippy-env/lib/python3.11/site-packages/cartographer/adapters/klipper_like/toolhead.py",
+        "size": 5612,
+        "sha256": "8de58e53034319ad9681cda83d4f19ffee86acf707dcd2491ac8b1885ed798a2"
+      },
+      {
+        "path": "/home/pjotr/klippy-env/lib/python3.11/site-packages/cartographer/mcu/__init__.py",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "/home/pjotr/klippy-env/lib/python3.11/site-packages/cartographer/mcu/mcu.py",
+        "size": 12871,
+        "sha256": "87910c551a68639c31b4477f8ad14320775ec25c8f4e07c63c28aa6d8d9df263"
+      },
+      {
+        "path": "/home/pjotr/klippy-env/lib/python3.11/site-packages/cartographer/toolhead.py",
+        "size": 2616,
+        "sha256": "473cfe7c037db4f8f47548e247bc7c1c4671775ab035ffb60e2b8fa8bffbd730"
+      }
+    ],
+    "loaded_modules": {
+      "cartographer.adapters.klipper.homing": "/home/pjotr/klippy-env/lib/python3.11/site-packages/cartographer/adapters/klipper/homing.py",
+      "cartographer.adapters.klipper.toolhead": "/home/pjotr/klippy-env/lib/python3.11/site-packages/cartographer/adapters/klipper/toolhead.py",
+      "cartographer.adapters.klipper_like.toolhead": "/home/pjotr/klippy-env/lib/python3.11/site-packages/cartographer/adapters/klipper_like/toolhead.py",
+      "cartographer.mcu": "/home/pjotr/klippy-env/lib/python3.11/site-packages/cartographer/mcu/__init__.py",
+      "cartographer.mcu.mcu": "/home/pjotr/klippy-env/lib/python3.11/site-packages/cartographer/mcu/mcu.py",
+      "cartographer.toolhead": "/home/pjotr/klippy-env/lib/python3.11/site-packages/cartographer/toolhead.py",
+      "clocksync": "/home/pjotr/klipper/klippy/clocksync.py",
+      "extras.accel_homing_backends": "/home/pjotr/accel_homing/accel_homing_backends.py",
+      "extras.adxl345": "/home/pjotr/klipper/klippy/extras/adxl345.py",
+      "extras.beacon_accel_homing": "/home/pjotr/accel_homing/beacon_accel_homing.py",
+      "extras.bulk_sensor": "/home/pjotr/klipper/klippy/extras/bulk_sensor.py",
+      "extras.homing": "/home/pjotr/klipper/klippy/extras/homing.py",
+      "kinematics.corexy": "/home/pjotr/klipper/klippy/kinematics/corexy.py",
+      "klippy": "/home/pjotr/klipper/klippy/klippy.py",
+      "mcu": "/home/pjotr/klipper/klippy/mcu.py",
+      "stepper": "/home/pjotr/klipper/klippy/stepper.py",
+      "toolhead": "/home/pjotr/klipper/klippy/toolhead.py"
+    },
+    "host_version": {
+      "software_version": "v0.13.0-730-g84104bbb-dirty",
+      "git_version": null,
+      "cpu_info": "4 core ?"
+    },
+    "git_commit_dirty": "not queried; installed source SHA256 fingerprints supplied"
+  },
+  "before": {
+    "host_monotonic_s": 6285.913255012,
+    "logical_commanded_position_mm": [
+      175.0,
+      175.0,
+      10.0,
+      0.0
+    ],
+    "kinematic_limits": [
+      [
+        1.0,
+        -1.0
+      ],
+      [
+        1.0,
+        -1.0
+      ],
+      [
+        1.0,
+        -1.0
+      ]
+    ],
+    "kinematic_status": {
+      "homed_axes": "",
+      "axis_minimum": [
+        0.0,
+        -5.0,
+        -5.0,
+        0
+      ],
+      "axis_maximum": [
+        350.0,
+        355.0,
+        330.0,
+        0
+      ]
+    },
+    "toolhead_status": {
+      "homed_axes": "",
+      "axis_minimum": [
+        0.0,
+        -5.0,
+        -5.0,
+        0
+      ],
+      "axis_maximum": [
+        350.0,
+        355.0,
+        330.0,
+        0
+      ],
+      "print_time": 2116.5493525499996,
+      "stalls": 0,
+      "estimated_print_time": 2122.1186099,
+      "extruder": "extruder",
+      "position": [
+        175.0,
+        175.0,
+        10.0,
+        0.0
+      ],
+      "max_velocity": 600.0,
+      "max_accel": 30000.0,
+      "minimum_cruise_ratio": 0.5,
+      "square_corner_velocity": 5.0,
+      "extra_axes": {
+        "extruder": 3
+      }
+    },
+    "max_velocity_and_acceleration": [
+      600.0,
+      30000.0
+    ],
+    "backend_cached_status": {
+      "type": "klipper_batch",
+      "sensor": "adxl345",
+      "requested_interval_s": 0.005,
+      "max_sample_age_s": null,
+      "sample_age_limit_enforced": false,
+      "configured_max_sample_age_s": 0.07,
+      "receipt_timeout_s": 0.05,
+      "stream_start_time_s": 2106.4207848,
+      "last_sample_age_s": 0.004184727777555963,
+      "observed_rate_hz": 3163.4446397417814,
+      "max_homing_speed": null,
+      "fault": null,
+      "max_report_travel_mm": null,
+      "startup_motion_request_limit_mm": null,
+      "latency_guaranteed": false,
+      "startup_motion_evaluated_speed_mm_s": 600.0,
+      "startup_motion_timeout_s": 0.21500000000000002,
+      "startup_motion_request_travel_mm": 94.80000000000001
+    },
+    "steppers": [
+      {
+        "name": "stepper_x",
+        "mcu_position_steps": -10664,
+        "commanded_position_mm": 349.99999999874376,
+        "step_distance_mm": 0.0125
+      },
+      {
+        "name": "stepper_y",
+        "mcu_position_steps": 16306,
+        "commanded_position_mm": -3.4481098531990995e-14,
+        "step_distance_mm": 0.0125
+      },
+      {
+        "name": "stepper_z",
+        "mcu_position_steps": 32000,
+        "commanded_position_mm": 10.0,
+        "step_distance_mm": 0.00125
+      },
+      {
+        "name": "stepper_z1",
+        "mcu_position_steps": 32000,
+        "commanded_position_mm": 10.0,
+        "step_distance_mm": 0.00125
+      },
+      {
+        "name": "stepper_z2",
+        "mcu_position_steps": 32000,
+        "commanded_position_mm": 10.0,
+        "step_distance_mm": 0.00125
+      },
+      {
+        "name": "stepper_z3",
+        "mcu_position_steps": 32000,
+        "commanded_position_mm": 10.0,
+        "step_distance_mm": 0.00125
+      }
+    ],
+    "cached_mcu_tmc": {
+      "mcu": {
+        "status": {
+          "mcu_version": "v0.12.0-718-g1b6e2049",
+          "mcu_build_versions": "gcc: (15:12.2.rel1-1) 12.2.1 20221205 binutils: (2.40-2+18+b1) 2.40",
+          "mcu_constants": {
+            "ADC_MAX": 4095,
+            "BUS_PINS_i2c1": "PB6,PB7",
+            "BUS_PINS_i2c1a": "PB8,PB9",
+            "BUS_PINS_i2c2": "PB10,PB11",
+            "BUS_PINS_i2c3": "PA8,PC9",
+            "BUS_PINS_sdio": "PC12,PD2,PC8,PC9,PC10,PC11",
+            "BUS_PINS_spi1": "PA6,PA7,PA5",
+            "BUS_PINS_spi1a": "PB4,PB5,PB3",
+            "BUS_PINS_spi2": "PB14,PB15,PB13",
+            "BUS_PINS_spi2a": "PC2,PC3,PB10",
+            "BUS_PINS_spi3": "PB4,PB5,PB3",
+            "BUS_PINS_spi3a": "PC11,PC12,PC10",
+            "BUS_PINS_spi4": "PE13,PE14,PE12",
+            "CLOCK_FREQ": 180000000,
+            "MCU": "stm32f446xx",
+            "PWM_MAX": 257,
+            "RESERVE_PINS_USB": "PA11,PA12",
+            "RESERVE_PINS_crystal": "PH0,PH1",
+            "STATS_SUMSQ_BASE": 256,
+            "STEPPER_STEP_BOTH_EDGE": 1
+          },
+          "last_stats": {
+            "mcu_awake": 0.002,
+            "mcu_task_avg": 8e-06,
+            "mcu_task_stddev": 1.2e-05,
+            "bytes_write": 263366,
+            "bytes_read": 298328,
+            "bytes_retransmit": 9,
+            "bytes_invalid": 0,
+            "send_seq": 13357,
+            "receive_seq": 13357,
+            "retransmit_seq": 2,
+            "srtt": 0.0,
+            "rttvar": 0.0,
+            "rto": 0.025,
+            "ready_bytes": 0,
+            "upcoming_bytes": 0,
+            "freq": 179999114
+          }
+        },
+        "stats": [
+          false,
+          "mcu: mcu_awake=0.002 mcu_task_avg=0.000008 mcu_task_stddev=0.000012 bytes_write=263366 bytes_read=298343 bytes_retransmit=9 bytes_invalid=0 send_seq=13357 receive_seq=13357 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=179999114"
+        ]
+      },
+      "mcu nhk": {
+        "status": {
+          "mcu_version": "v0.12.0-317-gb89d5523",
+          "mcu_build_versions": "gcc: (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision 273027] binutils: (2.34-4+rpi1+14) 2.34",
+          "mcu_constants": {
+            "ADC_MAX": 4095,
+            "BUS_PINS_i2c0a": "gpio0,gpio1",
+            "BUS_PINS_i2c0b": "gpio4,gpio5",
+            "BUS_PINS_i2c0c": "gpio8,gpio9",
+            "BUS_PINS_i2c0d": "gpio12,gpio13",
+            "BUS_PINS_i2c0e": "gpio16,gpio17",
+            "BUS_PINS_i2c0f": "gpio20,gpio21",
+            "BUS_PINS_i2c0g": "gpio24,gpio25",
+            "BUS_PINS_i2c0h": "gpio28,gpio29",
+            "BUS_PINS_i2c1a": "gpio2,gpio3",
+            "BUS_PINS_i2c1b": "gpio6,gpio7",
+            "BUS_PINS_i2c1c": "gpio10,gpio11",
+            "BUS_PINS_i2c1d": "gpio14,gpio15",
+            "BUS_PINS_i2c1e": "gpio18,gpio19",
+            "BUS_PINS_i2c1f": "gpio22,gpio23",
+            "BUS_PINS_i2c1g": "gpio26,gpio27",
+            "BUS_PINS_spi0a": "gpio0,gpio3,gpio2",
+            "BUS_PINS_spi0b": "gpio4,gpio7,gpio6",
+            "BUS_PINS_spi0c": "gpio16,gpio19,gpio18",
+            "BUS_PINS_spi0d": "gpio20,gpio23,gpio22",
+            "BUS_PINS_spi1a": "gpio8,gpio11,gpio10",
+            "BUS_PINS_spi1b": "gpio12,gpio15,gpio14",
+            "BUS_PINS_spi1c": "gpio24,gpio27,gpio26",
+            "CLOCK_FREQ": 12000000,
+            "INITIAL_PINS": "!gpio8",
+            "MCU": "rp2040",
+            "PWM_MAX": 255,
+            "STATS_SUMSQ_BASE": 256,
+            "STEPPER_BOTH_EDGE": 1
+          },
+          "last_stats": {
+            "mcu_awake": 0.001,
+            "mcu_task_avg": 5e-06,
+            "mcu_task_stddev": 4e-06,
+            "bytes_write": 14047,
+            "bytes_read": 184890,
+            "bytes_retransmit": 9,
+            "bytes_invalid": 0,
+            "send_seq": 2255,
+            "receive_seq": 2255,
+            "retransmit_seq": 2,
+            "srtt": 0.0,
+            "rttvar": 0.0,
+            "rto": 0.025,
+            "ready_bytes": 0,
+            "upcoming_bytes": 0,
+            "freq": 11999804,
+            "adj": 11999869
+          }
+        },
+        "stats": [
+          false,
+          "nhk: mcu_awake=0.001 mcu_task_avg=0.000005 mcu_task_stddev=0.000004 bytes_write=14047 bytes_read=184922 bytes_retransmit=9 bytes_invalid=0 send_seq=2255 receive_seq=2255 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=11999804 adj=11999876"
+        ]
+      },
+      "mcu cartographer": {
+        "status": {
+          "mcu_version": "Cartographer HT 5.1.0",
+          "mcu_build_versions": "",
+          "mcu_constants": {
+            "ADC_MAX": 4095,
+            "BUS_PINS_i2c1_PB8_PB7": "PB8,PB7",
+            "BUS_PINS_i2c2_PA9_PA8": "PA9,PA8",
+            "BUS_PINS_spi1": "PA6,PA7,PA5",
+            "CARTOGRAPHER_ADC_SMOOTH_COUNT": 16,
+            "CLOCK_FREQ": 170000000,
+            "INITIAL_PINS": "!PA3",
+            "MCU": "stm32g431xx",
+            "PWM_MAX": 2,
+            "RESERVE_PINS_USB": "PA11,PA12",
+            "RESERVE_PINS_crystal": "PF0,PF1",
+            "STATS_SUMSQ_BASE": 256,
+            "STEPPER_BOTH_EDGE": 1
+          },
+          "last_stats": {
+            "mcu_awake": 0.054,
+            "mcu_task_avg": 2e-05,
+            "mcu_task_stddev": 0.000117,
+            "bytes_write": 322502,
+            "bytes_read": 5987380,
+            "bytes_retransmit": 0,
+            "bytes_invalid": 0,
+            "send_seq": 45854,
+            "receive_seq": 45854,
+            "retransmit_seq": 0,
+            "srtt": 0.0,
+            "rttvar": 0.0,
+            "rto": 0.025,
+            "ready_bytes": 0,
+            "upcoming_bytes": 0,
+            "freq": 169998795,
+            "adj": 169999958
+          }
+        },
+        "stats": [
+          false,
+          "cartographer: mcu_awake=0.054 mcu_task_avg=0.000020 mcu_task_stddev=0.000117 bytes_write=322502 bytes_read=5987427 bytes_retransmit=0 bytes_invalid=0 send_seq=45854 receive_seq=45854 retransmit_seq=0 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=169998795 adj=169999781"
+        ]
+      },
+      "tmc_uart": {
+        "status": {
+          "unavailable": "get_status"
+        }
+      },
+      "tmc2209 extruder": {
+        "status": {
+          "mcu_phase_offset": 1,
+          "phase_offset_position": 0.0013599999999999999,
+          "run_current": 0.5966213466261493,
+          "hold_current": 0.5966213466261493,
+          "drv_status": null,
+          "temperature": null
+        }
+      },
+      "tmc5160 stepper_x": {
+        "status": {
+          "mcu_phase_offset": 51,
+          "phase_offset_position": 483.93749999999994,
+          "run_current": 1.7475112899636294,
+          "hold_current": 1.7475112899636294,
+          "drv_status": null,
+          "temperature": null
+        }
+      },
+      "tmc5160 stepper_y": {
+        "status": {
+          "mcu_phase_offset": 17,
+          "phase_offset_position": -203.6125,
+          "run_current": 1.7475112899636294,
+          "hold_current": 1.7475112899636294,
+          "drv_status": null,
+          "temperature": null
+        }
+      },
+      "tmc2209 stepper_z": {
+        "status": {
+          "mcu_phase_offset": 1,
+          "phase_offset_position": -29.99875,
+          "run_current": 0.7954951288348658,
+          "hold_current": 0.7954951288348658,
+          "drv_status": null,
+          "temperature": null
+        }
+      },
+      "tmc2209 stepper_z1": {
+        "status": {
+          "mcu_phase_offset": 127,
+          "phase_offset_position": -29.84125,
+          "run_current": 0.7954951288348658,
+          "hold_current": 0.7954951288348658,
+          "drv_status": null,
+          "temperature": null
+        }
+      },
+      "tmc2209 stepper_z2": {
+        "status": {
+          "mcu_phase_offset": 1,
+          "phase_offset_position": -29.99875,
+          "run_current": 0.7954951288348658,
+          "hold_current": 0.7954951288348658,
+          "drv_status": null,
+          "temperature": null
+        }
+      },
+      "tmc2209 stepper_z3": {
+        "status": {
+          "mcu_phase_offset": 127,
+          "phase_offset_position": -29.84125,
+          "run_current": 0.7954951288348658,
+          "hold_current": 0.7954951288348658,
+          "drv_status": null,
+          "temperature": null
+        }
+      }
+    },
+    "runtime": {
+      "threshold_g": {
+        "x": 2.5,
+        "y": 1.75
+      },
+      "impact_sign": {
+        "x": 0,
+        "y": 0
+      },
+      "homing_accel": 5000.0,
+      "back_off_dist": 5.0,
+      "saved_accel": null,
+      "operation_generation": 7,
+      "sensor_fault": null,
+      "scale": {
+        "name": "normalized_g",
+        "id": null,
+        "scale": 1.0
+      },
+      "session_scale": {
+        "name": "normalized_g",
+        "id": null,
+        "scale": 1.0
+      },
+      "full_scale_g": 16.0,
+      "sensor_name": "adxl345",
+      "baseline_status": {
+        "axis": "y",
+        "phase": "before_arm",
+        "result": "ready",
+        "quiet_range_enforced": true,
+        "motion_proof_noise_bound_g": null,
+        "quiet_samples": 318,
+        "quiet_span_ms": 100.196,
+        "required_samples": 50,
+        "required_span_ms": 100.0,
+        "best_quiet_samples": 318,
+        "best_quiet_span_ms": 100.196,
+        "best_quiet_peak_to_peak_g": {
+          "x": 0.158508,
+          "y": 0.090576,
+          "z": 0.179676
+        },
+        "observed_peak_to_peak_g": {
+          "x": 0.158508,
+          "y": 0.090576,
+          "z": 0.179676
+        },
+        "quiet_limit_g": 0.7,
+        "impact_threshold_g": 1.75,
+        "accepted_samples": 335,
+        "pre_cutoff_samples": 25,
+        "quiet_resets": 0,
+        "sample_age_ms": 10.587,
+        "max_sample_age_ms": null,
+        "sample_age_limit_enforced": false,
+        "configured_max_sample_age_ms": 70.0,
+        "last_receipt_time_s": 6270.939949651,
+        "receipt_timeout_ms": 50.0,
+        "oldest_batch_age_ms": 10.567,
+        "newest_batch_age_ms": 4.562
+      },
+      "baseline_time": 0.1,
+      "baseline_batches": 25,
+      "stream_timeout": 0.05,
+      "stream_on": false,
+      "native_stream_generation": 0,
+      "last": {
+        "x": {
+          "axis": "x",
+          "pass": 1,
+          "result": "impact",
+          "threshold_g": 2.5,
+          "impact_metric": "selected_axis",
+          "physical_position_verified": false,
+          "direction": 0,
+          "polarity_policy": "absolute_after_reference_subtraction_v1",
+          "reference_signal_quality": {
+            "amplitude_limited": false,
+            "excess_amplitude_unknown": false,
+            "peak_semantics": "reported_sensor_derived",
+            "signal_scope": "stationary_reference",
+            "native_clip_decode": null,
+            "clipped_axis_values": 0,
+            "clipped_axis_counts": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "range_limit_axis_values": 0,
+            "range_limit_axis_counts": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "onset_g": 10.1,
+          "impact_sign": 0,
+          "impact_peak_g": 10.1,
+          "noise_pos_g": 1.48,
+          "noise_neg_g": 1.28,
+          "noise_g": 1.48,
+          "velocity_mm_s": 34.8,
+          "moving": true,
+          "motion_seen": true,
+          "arm_time_s": 2105.7919049444445,
+          "onset_time_s": 2106.4035106842107,
+          "onset_sample": [
+            2106401615,
+            6003,
+            6,
+            20
+          ],
+          "start_position_mm": -175.0,
+          "expected_travel_mm": 525.0,
+          "backend": "klipper_batch",
+          "trigger_after_arm_s": 0.6116,
+          "amplitude_limited": false,
+          "excess_amplitude_unknown": false,
+          "peak_semantics": "reported_sensor_derived",
+          "signal_scope": "armed_response",
+          "native_clip_decode": null,
+          "clipped_axis_values": 0,
+          "clipped_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "range_limit_axis_values": 0,
+          "range_limit_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "motion_proof": {
+            "result": "proved",
+            "method": "raw_integral",
+            "backend": "klipper_batch",
+            "gap": false,
+            "overflow": false,
+            "effective_speed_mm_s": 60.0,
+            "effective_accel_mm_s2": 5000.0,
+            "noise_bound_xyz_g": null,
+            "arm_time_s": 2105.791905,
+            "sample_time_s": 2106.401299,
+            "evaluated_sample_time_s": 2105.841864,
+            "deadline_time_s": 2105.898905,
+            "request_time_s": 2106.410382,
+            "first_sample_after_arm_ms": 0.017056,
+            "first_step_after_arm_ms": null,
+            "step_epoch_precision_ms": null,
+            "sample_after_arm_ms": 609.394056,
+            "evaluated_sample_after_arm_ms": 49.959056,
+            "deadline_after_arm_ms": 107.0,
+            "request_after_arm_ms": 618.477144,
+            "sample_age_at_request_ms": 9.083089,
+            "raw_speed_mm_s": 48.514014,
+            "lower_speed_mm_s": 48.514014,
+            "upper_speed_mm_s": 48.514014,
+            "full_arm_peak_mm_s": 0.0,
+            "full_arm_peak_after_arm_ms": null,
+            "step_epoch_peak_mm_s": null,
+            "commanded_speed_mm_s": 40.625,
+            "command_eligible": true,
+            "interval_start_after_arm_ms": null,
+            "interval_end_after_arm_ms": null,
+            "history_samples": null,
+            "history_capacity": null,
+            "scan_comparisons": null,
+            "scan_budget_per_event": null,
+            "step_history_error": null
+          },
+          "trigger_position_mm": {
+            "stepper_x": 41.675,
+            "stepper_y": 378.85
+          },
+          "travel_mm": 34.875,
+          "travel_mm_exact": 34.875,
+          "trigger_travel_mm_signed": 34.875,
+          "halt_travel_mm_signed": 35.2875
+        },
+        "y": {
+          "axis": "y",
+          "pass": 1,
+          "result": "impact",
+          "threshold_g": 1.75,
+          "impact_metric": "selected_axis",
+          "physical_position_verified": false,
+          "direction": 0,
+          "polarity_policy": "absolute_after_reference_subtraction_v1",
+          "reference_signal_quality": {
+            "amplitude_limited": false,
+            "excess_amplitude_unknown": false,
+            "peak_semantics": "reported_sensor_derived",
+            "signal_scope": "stationary_reference",
+            "native_clip_decode": null,
+            "clipped_axis_values": 0,
+            "clipped_axis_counts": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "range_limit_axis_values": 0,
+            "range_limit_axis_counts": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "onset_g": 2.85,
+          "impact_sign": 0,
+          "impact_peak_g": 3.44,
+          "noise_pos_g": 1.07,
+          "noise_neg_g": 1.5,
+          "noise_g": 1.5,
+          "velocity_mm_s": 121.6,
+          "moving": true,
+          "motion_seen": true,
+          "arm_time_s": 2107.400434238889,
+          "onset_time_s": 2110.347808666667,
+          "onset_sample": [
+            2110345912,
+            2845,
+            6,
+            10
+          ],
+          "start_position_mm": -182.5,
+          "expected_travel_mm": 532.5,
+          "backend": "klipper_batch",
+          "trigger_after_arm_s": 2.9474,
+          "amplitude_limited": false,
+          "excess_amplitude_unknown": false,
+          "peak_semantics": "reported_sensor_derived",
+          "signal_scope": "armed_response",
+          "native_clip_decode": null,
+          "clipped_axis_values": 0,
+          "clipped_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "range_limit_axis_values": 0,
+          "range_limit_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "motion_proof": {
+            "result": "proved",
+            "method": "raw_integral",
+            "backend": "klipper_batch",
+            "gap": false,
+            "overflow": false,
+            "effective_speed_mm_s": 60.0,
+            "effective_accel_mm_s2": 5000.0,
+            "noise_bound_xyz_g": null,
+            "arm_time_s": 2107.400434,
+            "sample_time_s": 2110.345596,
+            "evaluated_sample_time_s": 2107.453711,
+            "deadline_time_s": 2107.507434,
+            "request_time_s": 2110.353087,
+            "first_sample_after_arm_ms": 0.184761,
+            "first_step_after_arm_ms": null,
+            "step_epoch_precision_ms": null,
+            "sample_after_arm_ms": 2945.161761,
+            "evaluated_sample_after_arm_ms": 53.276761,
+            "deadline_after_arm_ms": 107.0,
+            "request_after_arm_ms": 2952.652344,
+            "sample_age_at_request_ms": 7.490583,
+            "raw_speed_mm_s": 65.161117,
+            "lower_speed_mm_s": 65.161117,
+            "upper_speed_mm_s": 65.161117,
+            "full_arm_peak_mm_s": 0.0,
+            "full_arm_peak_after_arm_ms": null,
+            "step_epoch_peak_mm_s": null,
+            "commanded_speed_mm_s": 46.875,
+            "command_eligible": true,
+            "interval_start_after_arm_ms": null,
+            "interval_end_after_arm_ms": null,
+            "history_samples": null,
+            "history_capacity": null,
+            "scan_comparisons": null,
+            "scan_budget_per_event": null,
+            "step_history_error": null
+          },
+          "trigger_position_mm": {
+            "stepper_y": 198.825,
+            "stepper_x": 211.7
+          },
+          "travel_mm": 175.025,
+          "travel_mm_exact": 175.025,
+          "trigger_travel_mm_signed": 175.025,
+          "halt_travel_mm_signed": 175.3375
+        }
+      }
+    }
+  },
+  "after": {
+    "host_monotonic_s": 6289.116844418,
+    "logical_commanded_position_mm": [
+      175.0,
+      350.475,
+      10.0,
+      0.0
+    ],
+    "kinematic_limits": [
+      [
+        1.0,
+        -1.0
+      ],
+      [
+        1.0,
+        -1.0
+      ],
+      [
+        1.0,
+        -1.0
+      ]
+    ],
+    "kinematic_status": {
+      "homed_axes": "",
+      "axis_minimum": [
+        0.0,
+        -5.0,
+        -5.0,
+        0
+      ],
+      "axis_maximum": [
+        350.0,
+        355.0,
+        330.0,
+        0
+      ]
+    },
+    "toolhead_status": {
+      "homed_axes": "",
+      "axis_minimum": [
+        0.0,
+        -5.0,
+        -5.0,
+        0
+      ],
+      "axis_maximum": [
+        350.0,
+        355.0,
+        330.0,
+        0
+      ],
+      "print_time": 2124.953574494444,
+      "stalls": 0,
+      "estimated_print_time": 2125.3221869277777,
+      "extruder": "extruder",
+      "position": [
+        175.0,
+        350.475,
+        10.0,
+        0.0
+      ],
+      "max_velocity": 600.0,
+      "max_accel": 30000.0,
+      "minimum_cruise_ratio": 0.5,
+      "square_corner_velocity": 5.0,
+      "extra_axes": {
+        "extruder": 3
+      }
+    },
+    "max_velocity_and_acceleration": [
+      600.0,
+      30000.0
+    ],
+    "backend_cached_status": {
+      "type": "klipper_batch",
+      "sensor": "adxl345",
+      "requested_interval_s": 0.005,
+      "max_sample_age_s": null,
+      "sample_age_limit_enforced": false,
+      "configured_max_sample_age_s": 0.07,
+      "receipt_timeout_s": 0.05,
+      "stream_start_time_s": 2122.1295778666668,
+      "last_sample_age_s": 0.004653994444197451,
+      "observed_rate_hz": 3164.556961918999,
+      "max_homing_speed": null,
+      "fault": null,
+      "max_report_travel_mm": null,
+      "startup_motion_request_limit_mm": null,
+      "latency_guaranteed": false,
+      "startup_motion_evaluated_speed_mm_s": 600.0,
+      "startup_motion_timeout_s": 0.21500000000000002,
+      "startup_motion_request_travel_mm": 94.80000000000001
+    },
+    "steppers": [
+      {
+        "name": "stepper_x",
+        "mcu_position_steps": -5745,
+        "commanded_position_mm": 525.4749999999999,
+        "step_distance_mm": 0.0125
+      },
+      {
+        "name": "stepper_y",
+        "mcu_position_steps": 11387,
+        "commanded_position_mm": -175.47499999999997,
+        "step_distance_mm": 0.0125
+      },
+      {
+        "name": "stepper_z",
+        "mcu_position_steps": 32000,
+        "commanded_position_mm": 10.0,
+        "step_distance_mm": 0.00125
+      },
+      {
+        "name": "stepper_z1",
+        "mcu_position_steps": 32000,
+        "commanded_position_mm": 10.0,
+        "step_distance_mm": 0.00125
+      },
+      {
+        "name": "stepper_z2",
+        "mcu_position_steps": 32000,
+        "commanded_position_mm": 10.0,
+        "step_distance_mm": 0.00125
+      },
+      {
+        "name": "stepper_z3",
+        "mcu_position_steps": 32000,
+        "commanded_position_mm": 10.0,
+        "step_distance_mm": 0.00125
+      }
+    ],
+    "cached_mcu_tmc": {
+      "mcu": {
+        "status": {
+          "mcu_version": "v0.12.0-718-g1b6e2049",
+          "mcu_build_versions": "gcc: (15:12.2.rel1-1) 12.2.1 20221205 binutils: (2.40-2+18+b1) 2.40",
+          "mcu_constants": {
+            "ADC_MAX": 4095,
+            "BUS_PINS_i2c1": "PB6,PB7",
+            "BUS_PINS_i2c1a": "PB8,PB9",
+            "BUS_PINS_i2c2": "PB10,PB11",
+            "BUS_PINS_i2c3": "PA8,PC9",
+            "BUS_PINS_sdio": "PC12,PD2,PC8,PC9,PC10,PC11",
+            "BUS_PINS_spi1": "PA6,PA7,PA5",
+            "BUS_PINS_spi1a": "PB4,PB5,PB3",
+            "BUS_PINS_spi2": "PB14,PB15,PB13",
+            "BUS_PINS_spi2a": "PC2,PC3,PB10",
+            "BUS_PINS_spi3": "PB4,PB5,PB3",
+            "BUS_PINS_spi3a": "PC11,PC12,PC10",
+            "BUS_PINS_spi4": "PE13,PE14,PE12",
+            "CLOCK_FREQ": 180000000,
+            "MCU": "stm32f446xx",
+            "PWM_MAX": 257,
+            "RESERVE_PINS_USB": "PA11,PA12",
+            "RESERVE_PINS_crystal": "PH0,PH1",
+            "STATS_SUMSQ_BASE": 256,
+            "STEPPER_STEP_BOTH_EDGE": 1
+          },
+          "last_stats": {
+            "mcu_awake": 0.004,
+            "mcu_task_avg": 1.6e-05,
+            "mcu_task_stddev": 2.2e-05,
+            "bytes_write": 265547,
+            "bytes_read": 300084,
+            "bytes_retransmit": 9,
+            "bytes_invalid": 0,
+            "send_seq": 13475,
+            "receive_seq": 13475,
+            "retransmit_seq": 2,
+            "srtt": 0.0,
+            "rttvar": 0.0,
+            "rto": 0.025,
+            "ready_bytes": 0,
+            "upcoming_bytes": 0,
+            "freq": 179999124
+          }
+        },
+        "stats": [
+          false,
+          "mcu: mcu_awake=0.004 mcu_task_avg=0.000016 mcu_task_stddev=0.000022 bytes_write=265547 bytes_read=300099 bytes_retransmit=9 bytes_invalid=0 send_seq=13475 receive_seq=13475 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=179999124"
+        ]
+      },
+      "mcu nhk": {
+        "status": {
+          "mcu_version": "v0.12.0-317-gb89d5523",
+          "mcu_build_versions": "gcc: (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision 273027] binutils: (2.34-4+rpi1+14) 2.34",
+          "mcu_constants": {
+            "ADC_MAX": 4095,
+            "BUS_PINS_i2c0a": "gpio0,gpio1",
+            "BUS_PINS_i2c0b": "gpio4,gpio5",
+            "BUS_PINS_i2c0c": "gpio8,gpio9",
+            "BUS_PINS_i2c0d": "gpio12,gpio13",
+            "BUS_PINS_i2c0e": "gpio16,gpio17",
+            "BUS_PINS_i2c0f": "gpio20,gpio21",
+            "BUS_PINS_i2c0g": "gpio24,gpio25",
+            "BUS_PINS_i2c0h": "gpio28,gpio29",
+            "BUS_PINS_i2c1a": "gpio2,gpio3",
+            "BUS_PINS_i2c1b": "gpio6,gpio7",
+            "BUS_PINS_i2c1c": "gpio10,gpio11",
+            "BUS_PINS_i2c1d": "gpio14,gpio15",
+            "BUS_PINS_i2c1e": "gpio18,gpio19",
+            "BUS_PINS_i2c1f": "gpio22,gpio23",
+            "BUS_PINS_i2c1g": "gpio26,gpio27",
+            "BUS_PINS_spi0a": "gpio0,gpio3,gpio2",
+            "BUS_PINS_spi0b": "gpio4,gpio7,gpio6",
+            "BUS_PINS_spi0c": "gpio16,gpio19,gpio18",
+            "BUS_PINS_spi0d": "gpio20,gpio23,gpio22",
+            "BUS_PINS_spi1a": "gpio8,gpio11,gpio10",
+            "BUS_PINS_spi1b": "gpio12,gpio15,gpio14",
+            "BUS_PINS_spi1c": "gpio24,gpio27,gpio26",
+            "CLOCK_FREQ": 12000000,
+            "INITIAL_PINS": "!gpio8",
+            "MCU": "rp2040",
+            "PWM_MAX": 255,
+            "STATS_SUMSQ_BASE": 256,
+            "STEPPER_BOTH_EDGE": 1
+          },
+          "last_stats": {
+            "mcu_awake": 0.001,
+            "mcu_task_avg": 5e-06,
+            "mcu_task_stddev": 4e-06,
+            "bytes_write": 14065,
+            "bytes_read": 185139,
+            "bytes_retransmit": 9,
+            "bytes_invalid": 0,
+            "send_seq": 2258,
+            "receive_seq": 2258,
+            "retransmit_seq": 2,
+            "srtt": 0.0,
+            "rttvar": 0.0,
+            "rto": 0.025,
+            "ready_bytes": 0,
+            "upcoming_bytes": 0,
+            "freq": 11999805,
+            "adj": 11999868
+          }
+        },
+        "stats": [
+          false,
+          "nhk: mcu_awake=0.001 mcu_task_avg=0.000005 mcu_task_stddev=0.000004 bytes_write=14065 bytes_read=185198 bytes_retransmit=9 bytes_invalid=0 send_seq=2258 receive_seq=2258 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=11999805 adj=11999873"
+        ]
+      },
+      "mcu cartographer": {
+        "status": {
+          "mcu_version": "Cartographer HT 5.1.0",
+          "mcu_build_versions": "",
+          "mcu_constants": {
+            "ADC_MAX": 4095,
+            "BUS_PINS_i2c1_PB8_PB7": "PB8,PB7",
+            "BUS_PINS_i2c2_PA9_PA8": "PA9,PA8",
+            "BUS_PINS_spi1": "PA6,PA7,PA5",
+            "CARTOGRAPHER_ADC_SMOOTH_COUNT": 16,
+            "CLOCK_FREQ": 170000000,
+            "INITIAL_PINS": "!PA3",
+            "MCU": "stm32g431xx",
+            "PWM_MAX": 2,
+            "RESERVE_PINS_USB": "PA11,PA12",
+            "RESERVE_PINS_crystal": "PF0,PF1",
+            "STATS_SUMSQ_BASE": 256,
+            "STEPPER_BOTH_EDGE": 1
+          },
+          "last_stats": {
+            "mcu_awake": 0.054,
+            "mcu_task_avg": 2e-05,
+            "mcu_task_stddev": 0.000117,
+            "bytes_write": 325079,
+            "bytes_read": 6032515,
+            "bytes_retransmit": 0,
+            "bytes_invalid": 0,
+            "send_seq": 46215,
+            "receive_seq": 46215,
+            "retransmit_seq": 0,
+            "srtt": 0.0,
+            "rttvar": 0.0,
+            "rto": 0.025,
+            "ready_bytes": 0,
+            "upcoming_bytes": 0,
+            "freq": 169998796,
+            "adj": 169999493
+          }
+        },
+        "stats": [
+          false,
+          "cartographer: mcu_awake=0.306 mcu_task_avg=0.000030 mcu_task_stddev=0.000053 bytes_write=325079 bytes_read=6032610 bytes_retransmit=0 bytes_invalid=0 send_seq=46215 receive_seq=46215 retransmit_seq=0 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=169998796 adj=169999635"
+        ]
+      },
+      "tmc_uart": {
+        "status": {
+          "unavailable": "get_status"
+        }
+      },
+      "tmc2209 extruder": {
+        "status": {
+          "mcu_phase_offset": 1,
+          "phase_offset_position": 0.0013599999999999999,
+          "run_current": 0.5966213466261493,
+          "hold_current": 0.5966213466261493,
+          "drv_status": null,
+          "temperature": null
+        }
+      },
+      "tmc5160 stepper_x": {
+        "status": {
+          "mcu_phase_offset": 51,
+          "phase_offset_position": 597.925,
+          "run_current": 1.7475112899636294,
+          "hold_current": 1.7475112899636294,
+          "drv_status": null,
+          "temperature": null
+        }
+      },
+      "tmc5160 stepper_y": {
+        "status": {
+          "mcu_phase_offset": 17,
+          "phase_offset_position": -317.6,
+          "run_current": 1.7475112899636294,
+          "hold_current": 1.7475112899636294,
+          "drv_status": null,
+          "temperature": null
+        }
+      },
+      "tmc2209 stepper_z": {
+        "status": {
+          "mcu_phase_offset": 1,
+          "phase_offset_position": -29.99875,
+          "run_current": 0.7954951288348658,
+          "hold_current": 0.7954951288348658,
+          "drv_status": null,
+          "temperature": null
+        }
+      },
+      "tmc2209 stepper_z1": {
+        "status": {
+          "mcu_phase_offset": 127,
+          "phase_offset_position": -29.84125,
+          "run_current": 0.7954951288348658,
+          "hold_current": 0.7954951288348658,
+          "drv_status": null,
+          "temperature": null
+        }
+      },
+      "tmc2209 stepper_z2": {
+        "status": {
+          "mcu_phase_offset": 1,
+          "phase_offset_position": -29.99875,
+          "run_current": 0.7954951288348658,
+          "hold_current": 0.7954951288348658,
+          "drv_status": null,
+          "temperature": null
+        }
+      },
+      "tmc2209 stepper_z3": {
+        "status": {
+          "mcu_phase_offset": 127,
+          "phase_offset_position": -29.84125,
+          "run_current": 0.7954951288348658,
+          "hold_current": 0.7954951288348658,
+          "drv_status": null,
+          "temperature": null
+        }
+      }
+    },
+    "runtime": {
+      "threshold_g": {
+        "x": 2.5,
+        "y": 1.75
+      },
+      "impact_sign": {
+        "x": 0,
+        "y": 0
+      },
+      "homing_accel": 5000.0,
+      "back_off_dist": 5.0,
+      "saved_accel": null,
+      "operation_generation": 7,
+      "sensor_fault": null,
+      "scale": {
+        "name": "normalized_g",
+        "id": null,
+        "scale": 1.0
+      },
+      "session_scale": {
+        "name": "normalized_g",
+        "id": null,
+        "scale": 1.0
+      },
+      "full_scale_g": 16.0,
+      "sensor_name": "adxl345",
+      "baseline_status": {
+        "axis": "y",
+        "phase": "before_arm",
+        "result": "ready",
+        "quiet_range_enforced": true,
+        "motion_proof_noise_bound_g": null,
+        "quiet_samples": 318,
+        "quiet_span_ms": 100.167,
+        "required_samples": 50,
+        "required_span_ms": 100.0,
+        "best_quiet_samples": 318,
+        "best_quiet_span_ms": 100.167,
+        "best_quiet_peak_to_peak_g": {
+          "x": 0.128316,
+          "y": 0.143412,
+          "z": 0.1953
+        },
+        "observed_peak_to_peak_g": {
+          "x": 0.128316,
+          "y": 0.143412,
+          "z": 0.1953
+        },
+        "quiet_limit_g": 0.7,
+        "impact_threshold_g": 1.75,
+        "accepted_samples": 322,
+        "pre_cutoff_samples": 18,
+        "quiet_resets": 0,
+        "sample_age_ms": 7.237,
+        "max_sample_age_ms": null,
+        "sample_age_limit_enforced": false,
+        "configured_max_sample_age_ms": 70.0,
+        "last_receipt_time_s": 6286.557056067,
+        "receipt_timeout_ms": 50.0,
+        "oldest_batch_age_ms": 8.758,
+        "newest_batch_age_ms": 2.755
+      },
+      "baseline_time": 0.1,
+      "baseline_batches": 25,
+      "stream_timeout": 0.05,
+      "stream_on": false,
+      "native_stream_generation": 0,
+      "last": {
+        "x": {
+          "axis": "x",
+          "pass": 1,
+          "result": "impact",
+          "threshold_g": 2.5,
+          "impact_metric": "selected_axis",
+          "physical_position_verified": false,
+          "direction": 0,
+          "polarity_policy": "absolute_after_reference_subtraction_v1",
+          "reference_signal_quality": {
+            "amplitude_limited": false,
+            "excess_amplitude_unknown": false,
+            "peak_semantics": "reported_sensor_derived",
+            "signal_scope": "stationary_reference",
+            "native_clip_decode": null,
+            "clipped_axis_values": 0,
+            "clipped_axis_counts": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "range_limit_axis_values": 0,
+            "range_limit_axis_counts": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "onset_g": 10.1,
+          "impact_sign": 0,
+          "impact_peak_g": 10.1,
+          "noise_pos_g": 1.48,
+          "noise_neg_g": 1.28,
+          "noise_g": 1.48,
+          "velocity_mm_s": 34.8,
+          "moving": true,
+          "motion_seen": true,
+          "arm_time_s": 2105.7919049444445,
+          "onset_time_s": 2106.4035106842107,
+          "onset_sample": [
+            2106401615,
+            6003,
+            6,
+            20
+          ],
+          "start_position_mm": -175.0,
+          "expected_travel_mm": 525.0,
+          "backend": "klipper_batch",
+          "trigger_after_arm_s": 0.6116,
+          "amplitude_limited": false,
+          "excess_amplitude_unknown": false,
+          "peak_semantics": "reported_sensor_derived",
+          "signal_scope": "armed_response",
+          "native_clip_decode": null,
+          "clipped_axis_values": 0,
+          "clipped_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "range_limit_axis_values": 0,
+          "range_limit_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "motion_proof": {
+            "result": "proved",
+            "method": "raw_integral",
+            "backend": "klipper_batch",
+            "gap": false,
+            "overflow": false,
+            "effective_speed_mm_s": 60.0,
+            "effective_accel_mm_s2": 5000.0,
+            "noise_bound_xyz_g": null,
+            "arm_time_s": 2105.791905,
+            "sample_time_s": 2106.401299,
+            "evaluated_sample_time_s": 2105.841864,
+            "deadline_time_s": 2105.898905,
+            "request_time_s": 2106.410382,
+            "first_sample_after_arm_ms": 0.017056,
+            "first_step_after_arm_ms": null,
+            "step_epoch_precision_ms": null,
+            "sample_after_arm_ms": 609.394056,
+            "evaluated_sample_after_arm_ms": 49.959056,
+            "deadline_after_arm_ms": 107.0,
+            "request_after_arm_ms": 618.477144,
+            "sample_age_at_request_ms": 9.083089,
+            "raw_speed_mm_s": 48.514014,
+            "lower_speed_mm_s": 48.514014,
+            "upper_speed_mm_s": 48.514014,
+            "full_arm_peak_mm_s": 0.0,
+            "full_arm_peak_after_arm_ms": null,
+            "step_epoch_peak_mm_s": null,
+            "commanded_speed_mm_s": 40.625,
+            "command_eligible": true,
+            "interval_start_after_arm_ms": null,
+            "interval_end_after_arm_ms": null,
+            "history_samples": null,
+            "history_capacity": null,
+            "scan_comparisons": null,
+            "scan_budget_per_event": null,
+            "step_history_error": null
+          },
+          "trigger_position_mm": {
+            "stepper_x": 41.675,
+            "stepper_y": 378.85
+          },
+          "travel_mm": 34.875,
+          "travel_mm_exact": 34.875,
+          "trigger_travel_mm_signed": 34.875,
+          "halt_travel_mm_signed": 35.2875
+        },
+        "y": {
+          "axis": "y",
+          "pass": 1,
+          "result": "impact",
+          "threshold_g": 1.75,
+          "impact_metric": "selected_axis",
+          "physical_position_verified": false,
+          "direction": 0,
+          "polarity_policy": "absolute_after_reference_subtraction_v1",
+          "reference_signal_quality": {
+            "amplitude_limited": false,
+            "excess_amplitude_unknown": false,
+            "peak_semantics": "reported_sensor_derived",
+            "signal_scope": "stationary_reference",
+            "native_clip_decode": null,
+            "clipped_axis_values": 0,
+            "clipped_axis_counts": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "range_limit_axis_values": 0,
+            "range_limit_axis_counts": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "onset_g": 1.81,
+          "impact_sign": 0,
+          "impact_peak_g": 1.81,
+          "noise_pos_g": 1.19,
+          "noise_neg_g": 1.54,
+          "noise_g": 1.54,
+          "velocity_mm_s": 43.6,
+          "moving": true,
+          "motion_seen": true,
+          "arm_time_s": 2123.0163291944446,
+          "onset_time_s": 2124.0626891052634,
+          "onset_sample": [
+            2124062057,
+            6005,
+            2,
+            20
+          ],
+          "start_position_mm": -182.5,
+          "expected_travel_mm": 532.5,
+          "backend": "klipper_batch",
+          "trigger_after_arm_s": 1.0464,
+          "amplitude_limited": false,
+          "excess_amplitude_unknown": false,
+          "peak_semantics": "reported_sensor_derived",
+          "signal_scope": "armed_response",
+          "native_clip_decode": null,
+          "clipped_axis_values": 0,
+          "clipped_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "range_limit_axis_values": 0,
+          "range_limit_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "motion_proof": {
+            "result": "proved",
+            "method": "raw_integral",
+            "backend": "klipper_batch",
+            "gap": false,
+            "overflow": false,
+            "effective_speed_mm_s": 60.0,
+            "effective_accel_mm_s2": 5000.0,
+            "noise_bound_xyz_g": null,
+            "arm_time_s": 2123.016329,
+            "sample_time_s": 2124.061741,
+            "evaluated_sample_time_s": 2123.063002,
+            "deadline_time_s": 2123.123329,
+            "request_time_s": 2124.070632,
+            "first_sample_after_arm_ms": 0.212806,
+            "first_step_after_arm_ms": null,
+            "step_epoch_precision_ms": null,
+            "sample_after_arm_ms": 1045.411806,
+            "evaluated_sample_after_arm_ms": 46.672806,
+            "deadline_after_arm_ms": 107.0,
+            "request_after_arm_ms": 1054.30255,
+            "sample_age_at_request_ms": 8.890744,
+            "raw_speed_mm_s": 55.571834,
+            "lower_speed_mm_s": 55.571834,
+            "upper_speed_mm_s": 55.571834,
+            "full_arm_peak_mm_s": 0.0,
+            "full_arm_peak_after_arm_ms": null,
+            "step_epoch_peak_mm_s": null,
+            "commanded_speed_mm_s": 31.25,
+            "command_eligible": true,
+            "interval_start_after_arm_ms": null,
+            "interval_end_after_arm_ms": null,
+            "history_samples": null,
+            "history_capacity": null,
+            "scan_comparisons": null,
+            "scan_budget_per_event": null,
+            "step_history_error": null
+          },
+          "trigger_position_mm": {
+            "stepper_y": 142.8125,
+            "stepper_x": -72.2875
+          },
+          "travel_mm": 61.013,
+          "travel_mm_exact": 61.0125,
+          "trigger_travel_mm_signed": 61.0125,
+          "halt_travel_mm_signed": 61.487500000000004
+        }
+      }
+    }
+  },
+  "homes": [
+    {
+      "home_id": 1,
+      "axis": "y",
+      "sample": 0,
+      "begin_host_monotonic_s": 6285.916490401,
+      "phase": "discovery",
+      "previous_home_id": null,
+      "previous_return_completed": null,
+      "before": {
+        "host_monotonic_s": 6285.916494068,
+        "logical_commanded_position_mm": [
+          175.0,
+          175.0,
+          10.0,
+          0.0
+        ],
+        "kinematic_limits": [
+          [
+            1.0,
+            -1.0
+          ],
+          [
+            1.0,
+            -1.0
+          ],
+          [
+            1.0,
+            -1.0
+          ]
+        ],
+        "kinematic_status": {
+          "homed_axes": "",
+          "axis_minimum": [
+            0.0,
+            -5.0,
+            -5.0,
+            0
+          ],
+          "axis_maximum": [
+            350.0,
+            355.0,
+            330.0,
+            0
+          ]
+        },
+        "toolhead_status": {
+          "homed_axes": "",
+          "axis_minimum": [
+            0.0,
+            -5.0,
+            -5.0,
+            0
+          ],
+          "axis_maximum": [
+            350.0,
+            355.0,
+            330.0,
+            0
+          ],
+          "print_time": 2116.5493525499996,
+          "stalls": 0,
+          "estimated_print_time": 2122.121848938889,
+          "extruder": "extruder",
+          "position": [
+            175.0,
+            175.0,
+            10.0,
+            0.0
+          ],
+          "max_velocity": 600.0,
+          "max_accel": 30000.0,
+          "minimum_cruise_ratio": 0.5,
+          "square_corner_velocity": 5.0,
+          "extra_axes": {
+            "extruder": 3
+          }
+        },
+        "max_velocity_and_acceleration": [
+          600.0,
+          30000.0
+        ],
+        "backend_cached_status": {
+          "type": "klipper_batch",
+          "sensor": "adxl345",
+          "requested_interval_s": 0.005,
+          "max_sample_age_s": null,
+          "sample_age_limit_enforced": false,
+          "configured_max_sample_age_s": 0.07,
+          "receipt_timeout_s": 0.05,
+          "stream_start_time_s": 2106.4207848,
+          "last_sample_age_s": 0.004184727777555963,
+          "observed_rate_hz": 3163.4446397417814,
+          "max_homing_speed": null,
+          "fault": null,
+          "max_report_travel_mm": null,
+          "startup_motion_request_limit_mm": null,
+          "latency_guaranteed": false,
+          "startup_motion_evaluated_speed_mm_s": 600.0,
+          "startup_motion_timeout_s": 0.21500000000000002,
+          "startup_motion_request_travel_mm": 94.80000000000001
+        },
+        "steppers": [
+          {
+            "name": "stepper_x",
+            "mcu_position_steps": -10664,
+            "commanded_position_mm": 349.99999999874376,
+            "step_distance_mm": 0.0125
+          },
+          {
+            "name": "stepper_y",
+            "mcu_position_steps": 16306,
+            "commanded_position_mm": -3.4481098531990995e-14,
+            "step_distance_mm": 0.0125
+          },
+          {
+            "name": "stepper_z",
+            "mcu_position_steps": 32000,
+            "commanded_position_mm": 10.0,
+            "step_distance_mm": 0.00125
+          },
+          {
+            "name": "stepper_z1",
+            "mcu_position_steps": 32000,
+            "commanded_position_mm": 10.0,
+            "step_distance_mm": 0.00125
+          },
+          {
+            "name": "stepper_z2",
+            "mcu_position_steps": 32000,
+            "commanded_position_mm": 10.0,
+            "step_distance_mm": 0.00125
+          },
+          {
+            "name": "stepper_z3",
+            "mcu_position_steps": 32000,
+            "commanded_position_mm": 10.0,
+            "step_distance_mm": 0.00125
+          }
+        ],
+        "cached_mcu_tmc": {
+          "mcu": {
+            "status": {
+              "mcu_version": "v0.12.0-718-g1b6e2049",
+              "mcu_build_versions": "gcc: (15:12.2.rel1-1) 12.2.1 20221205 binutils: (2.40-2+18+b1) 2.40",
+              "mcu_constants": {
+                "ADC_MAX": 4095,
+                "BUS_PINS_i2c1": "PB6,PB7",
+                "BUS_PINS_i2c1a": "PB8,PB9",
+                "BUS_PINS_i2c2": "PB10,PB11",
+                "BUS_PINS_i2c3": "PA8,PC9",
+                "BUS_PINS_sdio": "PC12,PD2,PC8,PC9,PC10,PC11",
+                "BUS_PINS_spi1": "PA6,PA7,PA5",
+                "BUS_PINS_spi1a": "PB4,PB5,PB3",
+                "BUS_PINS_spi2": "PB14,PB15,PB13",
+                "BUS_PINS_spi2a": "PC2,PC3,PB10",
+                "BUS_PINS_spi3": "PB4,PB5,PB3",
+                "BUS_PINS_spi3a": "PC11,PC12,PC10",
+                "BUS_PINS_spi4": "PE13,PE14,PE12",
+                "CLOCK_FREQ": 180000000,
+                "MCU": "stm32f446xx",
+                "PWM_MAX": 257,
+                "RESERVE_PINS_USB": "PA11,PA12",
+                "RESERVE_PINS_crystal": "PH0,PH1",
+                "STATS_SUMSQ_BASE": 256,
+                "STEPPER_STEP_BOTH_EDGE": 1
+              },
+              "last_stats": {
+                "mcu_awake": 0.002,
+                "mcu_task_avg": 8e-06,
+                "mcu_task_stddev": 1.2e-05,
+                "bytes_write": 263366,
+                "bytes_read": 298343,
+                "bytes_retransmit": 9,
+                "bytes_invalid": 0,
+                "send_seq": 13357,
+                "receive_seq": 13357,
+                "retransmit_seq": 2,
+                "srtt": 0.0,
+                "rttvar": 0.0,
+                "rto": 0.025,
+                "ready_bytes": 0,
+                "upcoming_bytes": 0,
+                "freq": 179999114
+              }
+            },
+            "stats": [
+              false,
+              "mcu: mcu_awake=0.002 mcu_task_avg=0.000008 mcu_task_stddev=0.000012 bytes_write=263366 bytes_read=298343 bytes_retransmit=9 bytes_invalid=0 send_seq=13357 receive_seq=13357 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=179999114"
+            ]
+          },
+          "mcu nhk": {
+            "status": {
+              "mcu_version": "v0.12.0-317-gb89d5523",
+              "mcu_build_versions": "gcc: (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision 273027] binutils: (2.34-4+rpi1+14) 2.34",
+              "mcu_constants": {
+                "ADC_MAX": 4095,
+                "BUS_PINS_i2c0a": "gpio0,gpio1",
+                "BUS_PINS_i2c0b": "gpio4,gpio5",
+                "BUS_PINS_i2c0c": "gpio8,gpio9",
+                "BUS_PINS_i2c0d": "gpio12,gpio13",
+                "BUS_PINS_i2c0e": "gpio16,gpio17",
+                "BUS_PINS_i2c0f": "gpio20,gpio21",
+                "BUS_PINS_i2c0g": "gpio24,gpio25",
+                "BUS_PINS_i2c0h": "gpio28,gpio29",
+                "BUS_PINS_i2c1a": "gpio2,gpio3",
+                "BUS_PINS_i2c1b": "gpio6,gpio7",
+                "BUS_PINS_i2c1c": "gpio10,gpio11",
+                "BUS_PINS_i2c1d": "gpio14,gpio15",
+                "BUS_PINS_i2c1e": "gpio18,gpio19",
+                "BUS_PINS_i2c1f": "gpio22,gpio23",
+                "BUS_PINS_i2c1g": "gpio26,gpio27",
+                "BUS_PINS_spi0a": "gpio0,gpio3,gpio2",
+                "BUS_PINS_spi0b": "gpio4,gpio7,gpio6",
+                "BUS_PINS_spi0c": "gpio16,gpio19,gpio18",
+                "BUS_PINS_spi0d": "gpio20,gpio23,gpio22",
+                "BUS_PINS_spi1a": "gpio8,gpio11,gpio10",
+                "BUS_PINS_spi1b": "gpio12,gpio15,gpio14",
+                "BUS_PINS_spi1c": "gpio24,gpio27,gpio26",
+                "CLOCK_FREQ": 12000000,
+                "INITIAL_PINS": "!gpio8",
+                "MCU": "rp2040",
+                "PWM_MAX": 255,
+                "STATS_SUMSQ_BASE": 256,
+                "STEPPER_BOTH_EDGE": 1
+              },
+              "last_stats": {
+                "mcu_awake": 0.001,
+                "mcu_task_avg": 5e-06,
+                "mcu_task_stddev": 4e-06,
+                "bytes_write": 14047,
+                "bytes_read": 184922,
+                "bytes_retransmit": 9,
+                "bytes_invalid": 0,
+                "send_seq": 2255,
+                "receive_seq": 2255,
+                "retransmit_seq": 2,
+                "srtt": 0.0,
+                "rttvar": 0.0,
+                "rto": 0.025,
+                "ready_bytes": 0,
+                "upcoming_bytes": 0,
+                "freq": 11999804,
+                "adj": 11999876
+              }
+            },
+            "stats": [
+              false,
+              "nhk: mcu_awake=0.001 mcu_task_avg=0.000005 mcu_task_stddev=0.000004 bytes_write=14047 bytes_read=184922 bytes_retransmit=9 bytes_invalid=0 send_seq=2255 receive_seq=2255 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=11999804 adj=11999876"
+            ]
+          },
+          "mcu cartographer": {
+            "status": {
+              "mcu_version": "Cartographer HT 5.1.0",
+              "mcu_build_versions": "",
+              "mcu_constants": {
+                "ADC_MAX": 4095,
+                "BUS_PINS_i2c1_PB8_PB7": "PB8,PB7",
+                "BUS_PINS_i2c2_PA9_PA8": "PA9,PA8",
+                "BUS_PINS_spi1": "PA6,PA7,PA5",
+                "CARTOGRAPHER_ADC_SMOOTH_COUNT": 16,
+                "CLOCK_FREQ": 170000000,
+                "INITIAL_PINS": "!PA3",
+                "MCU": "stm32g431xx",
+                "PWM_MAX": 2,
+                "RESERVE_PINS_USB": "PA11,PA12",
+                "RESERVE_PINS_crystal": "PF0,PF1",
+                "STATS_SUMSQ_BASE": 256,
+                "STEPPER_BOTH_EDGE": 1
+              },
+              "last_stats": {
+                "mcu_awake": 0.054,
+                "mcu_task_avg": 2e-05,
+                "mcu_task_stddev": 0.000117,
+                "bytes_write": 322502,
+                "bytes_read": 5987427,
+                "bytes_retransmit": 0,
+                "bytes_invalid": 0,
+                "send_seq": 45854,
+                "receive_seq": 45854,
+                "retransmit_seq": 0,
+                "srtt": 0.0,
+                "rttvar": 0.0,
+                "rto": 0.025,
+                "ready_bytes": 0,
+                "upcoming_bytes": 0,
+                "freq": 169998795,
+                "adj": 169999781
+              }
+            },
+            "stats": [
+              false,
+              "cartographer: mcu_awake=0.054 mcu_task_avg=0.000020 mcu_task_stddev=0.000117 bytes_write=322502 bytes_read=5987427 bytes_retransmit=0 bytes_invalid=0 send_seq=45854 receive_seq=45854 retransmit_seq=0 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=169998795 adj=169999781"
+            ]
+          },
+          "tmc_uart": {
+            "status": {
+              "unavailable": "get_status"
+            }
+          },
+          "tmc2209 extruder": {
+            "status": {
+              "mcu_phase_offset": 1,
+              "phase_offset_position": 0.0013599999999999999,
+              "run_current": 0.5966213466261493,
+              "hold_current": 0.5966213466261493,
+              "drv_status": null,
+              "temperature": null
+            }
+          },
+          "tmc5160 stepper_x": {
+            "status": {
+              "mcu_phase_offset": 51,
+              "phase_offset_position": 483.93749999999994,
+              "run_current": 1.7475112899636294,
+              "hold_current": 1.7475112899636294,
+              "drv_status": null,
+              "temperature": null
+            }
+          },
+          "tmc5160 stepper_y": {
+            "status": {
+              "mcu_phase_offset": 17,
+              "phase_offset_position": -203.6125,
+              "run_current": 1.7475112899636294,
+              "hold_current": 1.7475112899636294,
+              "drv_status": null,
+              "temperature": null
+            }
+          },
+          "tmc2209 stepper_z": {
+            "status": {
+              "mcu_phase_offset": 1,
+              "phase_offset_position": -29.99875,
+              "run_current": 0.7954951288348658,
+              "hold_current": 0.7954951288348658,
+              "drv_status": null,
+              "temperature": null
+            }
+          },
+          "tmc2209 stepper_z1": {
+            "status": {
+              "mcu_phase_offset": 127,
+              "phase_offset_position": -29.84125,
+              "run_current": 0.7954951288348658,
+              "hold_current": 0.7954951288348658,
+              "drv_status": null,
+              "temperature": null
+            }
+          },
+          "tmc2209 stepper_z2": {
+            "status": {
+              "mcu_phase_offset": 1,
+              "phase_offset_position": -29.99875,
+              "run_current": 0.7954951288348658,
+              "hold_current": 0.7954951288348658,
+              "drv_status": null,
+              "temperature": null
+            }
+          },
+          "tmc2209 stepper_z3": {
+            "status": {
+              "mcu_phase_offset": 127,
+              "phase_offset_position": -29.84125,
+              "run_current": 0.7954951288348658,
+              "hold_current": 0.7954951288348658,
+              "drv_status": null,
+              "temperature": null
+            }
+          }
+        },
+        "runtime": {
+          "threshold_g": {
+            "x": 2.5,
+            "y": 1.75
+          },
+          "impact_sign": {
+            "x": 0,
+            "y": 0
+          },
+          "homing_accel": 5000.0,
+          "back_off_dist": 5.0,
+          "saved_accel": null,
+          "operation_generation": 7,
+          "sensor_fault": null,
+          "scale": {
+            "name": "normalized_g",
+            "id": null,
+            "scale": 1.0
+          },
+          "session_scale": {
+            "name": "normalized_g",
+            "id": null,
+            "scale": 1.0
+          },
+          "full_scale_g": 16.0,
+          "sensor_name": "adxl345",
+          "baseline_status": {
+            "axis": "y",
+            "phase": "before_arm",
+            "result": "ready",
+            "quiet_range_enforced": true,
+            "motion_proof_noise_bound_g": null,
+            "quiet_samples": 318,
+            "quiet_span_ms": 100.196,
+            "required_samples": 50,
+            "required_span_ms": 100.0,
+            "best_quiet_samples": 318,
+            "best_quiet_span_ms": 100.196,
+            "best_quiet_peak_to_peak_g": {
+              "x": 0.158508,
+              "y": 0.090576,
+              "z": 0.179676
+            },
+            "observed_peak_to_peak_g": {
+              "x": 0.158508,
+              "y": 0.090576,
+              "z": 0.179676
+            },
+            "quiet_limit_g": 0.7,
+            "impact_threshold_g": 1.75,
+            "accepted_samples": 335,
+            "pre_cutoff_samples": 25,
+            "quiet_resets": 0,
+            "sample_age_ms": 10.587,
+            "max_sample_age_ms": null,
+            "sample_age_limit_enforced": false,
+            "configured_max_sample_age_ms": 70.0,
+            "last_receipt_time_s": 6270.939949651,
+            "receipt_timeout_ms": 50.0,
+            "oldest_batch_age_ms": 10.567,
+            "newest_batch_age_ms": 4.562
+          },
+          "baseline_time": 0.1,
+          "baseline_batches": 25,
+          "stream_timeout": 0.05,
+          "stream_on": false,
+          "native_stream_generation": 0,
+          "last": {
+            "x": {
+              "axis": "x",
+              "pass": 1,
+              "result": "impact",
+              "threshold_g": 2.5,
+              "impact_metric": "selected_axis",
+              "physical_position_verified": false,
+              "direction": 0,
+              "polarity_policy": "absolute_after_reference_subtraction_v1",
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "onset_g": 10.1,
+              "impact_sign": 0,
+              "impact_peak_g": 10.1,
+              "noise_pos_g": 1.48,
+              "noise_neg_g": 1.28,
+              "noise_g": 1.48,
+              "velocity_mm_s": 34.8,
+              "moving": true,
+              "motion_seen": true,
+              "arm_time_s": 2105.7919049444445,
+              "onset_time_s": 2106.4035106842107,
+              "onset_sample": [
+                2106401615,
+                6003,
+                6,
+                20
+              ],
+              "start_position_mm": -175.0,
+              "expected_travel_mm": 525.0,
+              "backend": "klipper_batch",
+              "trigger_after_arm_s": 0.6116,
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "armed_response",
+              "native_clip_decode": null,
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "motion_proof": {
+                "result": "proved",
+                "method": "raw_integral",
+                "backend": "klipper_batch",
+                "gap": false,
+                "overflow": false,
+                "effective_speed_mm_s": 60.0,
+                "effective_accel_mm_s2": 5000.0,
+                "noise_bound_xyz_g": null,
+                "arm_time_s": 2105.791905,
+                "sample_time_s": 2106.401299,
+                "evaluated_sample_time_s": 2105.841864,
+                "deadline_time_s": 2105.898905,
+                "request_time_s": 2106.410382,
+                "first_sample_after_arm_ms": 0.017056,
+                "first_step_after_arm_ms": null,
+                "step_epoch_precision_ms": null,
+                "sample_after_arm_ms": 609.394056,
+                "evaluated_sample_after_arm_ms": 49.959056,
+                "deadline_after_arm_ms": 107.0,
+                "request_after_arm_ms": 618.477144,
+                "sample_age_at_request_ms": 9.083089,
+                "raw_speed_mm_s": 48.514014,
+                "lower_speed_mm_s": 48.514014,
+                "upper_speed_mm_s": 48.514014,
+                "full_arm_peak_mm_s": 0.0,
+                "full_arm_peak_after_arm_ms": null,
+                "step_epoch_peak_mm_s": null,
+                "commanded_speed_mm_s": 40.625,
+                "command_eligible": true,
+                "interval_start_after_arm_ms": null,
+                "interval_end_after_arm_ms": null,
+                "history_samples": null,
+                "history_capacity": null,
+                "scan_comparisons": null,
+                "scan_budget_per_event": null,
+                "step_history_error": null
+              },
+              "trigger_position_mm": {
+                "stepper_x": 41.675,
+                "stepper_y": 378.85
+              },
+              "travel_mm": 34.875,
+              "travel_mm_exact": 34.875,
+              "trigger_travel_mm_signed": 34.875,
+              "halt_travel_mm_signed": 35.2875
+            },
+            "y": {
+              "axis": "y",
+              "pass": 1,
+              "result": "impact",
+              "threshold_g": 1.75,
+              "impact_metric": "selected_axis",
+              "physical_position_verified": false,
+              "direction": 0,
+              "polarity_policy": "absolute_after_reference_subtraction_v1",
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "onset_g": 2.85,
+              "impact_sign": 0,
+              "impact_peak_g": 3.44,
+              "noise_pos_g": 1.07,
+              "noise_neg_g": 1.5,
+              "noise_g": 1.5,
+              "velocity_mm_s": 121.6,
+              "moving": true,
+              "motion_seen": true,
+              "arm_time_s": 2107.400434238889,
+              "onset_time_s": 2110.347808666667,
+              "onset_sample": [
+                2110345912,
+                2845,
+                6,
+                10
+              ],
+              "start_position_mm": -182.5,
+              "expected_travel_mm": 532.5,
+              "backend": "klipper_batch",
+              "trigger_after_arm_s": 2.9474,
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "armed_response",
+              "native_clip_decode": null,
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "motion_proof": {
+                "result": "proved",
+                "method": "raw_integral",
+                "backend": "klipper_batch",
+                "gap": false,
+                "overflow": false,
+                "effective_speed_mm_s": 60.0,
+                "effective_accel_mm_s2": 5000.0,
+                "noise_bound_xyz_g": null,
+                "arm_time_s": 2107.400434,
+                "sample_time_s": 2110.345596,
+                "evaluated_sample_time_s": 2107.453711,
+                "deadline_time_s": 2107.507434,
+                "request_time_s": 2110.353087,
+                "first_sample_after_arm_ms": 0.184761,
+                "first_step_after_arm_ms": null,
+                "step_epoch_precision_ms": null,
+                "sample_after_arm_ms": 2945.161761,
+                "evaluated_sample_after_arm_ms": 53.276761,
+                "deadline_after_arm_ms": 107.0,
+                "request_after_arm_ms": 2952.652344,
+                "sample_age_at_request_ms": 7.490583,
+                "raw_speed_mm_s": 65.161117,
+                "lower_speed_mm_s": 65.161117,
+                "upper_speed_mm_s": 65.161117,
+                "full_arm_peak_mm_s": 0.0,
+                "full_arm_peak_after_arm_ms": null,
+                "step_epoch_peak_mm_s": null,
+                "commanded_speed_mm_s": 46.875,
+                "command_eligible": true,
+                "interval_start_after_arm_ms": null,
+                "interval_end_after_arm_ms": null,
+                "history_samples": null,
+                "history_capacity": null,
+                "scan_comparisons": null,
+                "scan_budget_per_event": null,
+                "step_history_error": null
+              },
+              "trigger_position_mm": {
+                "stepper_y": 198.825,
+                "stepper_x": 211.7
+              },
+              "travel_mm": 175.025,
+              "travel_mm_exact": 175.025,
+              "trigger_travel_mm_signed": 175.025,
+              "halt_travel_mm_signed": 175.3375
+            }
+          }
+        }
+      },
+      "capture": {
+        "dropped": 0,
+        "baseline_g": [
+          -0.026251849058142963,
+          0.0012817358526480585,
+          0.9535061886785396
+        ],
+        "fault": null,
+        "amplitude_limited": false,
+        "excess_amplitude_unknown": false,
+        "peak_semantics": "reported_sensor_derived",
+        "signal_scope": "capture",
+        "native_clip_decode": null,
+        "clipped_axis_values": 0,
+        "clipped_axis_counts": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "range_limit_axis_values": 0,
+        "range_limit_axis_counts": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "reference_signal_quality": {
+          "amplitude_limited": false,
+          "excess_amplitude_unknown": false,
+          "peak_semantics": "reported_sensor_derived",
+          "signal_scope": "stationary_reference",
+          "native_clip_decode": null,
+          "clipped_axis_values": 0,
+          "clipped_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "range_limit_axis_values": 0,
+          "range_limit_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "detector": {
+          "axis": "y",
+          "arm_time_s": 2123.0163291944446,
+          "onset_time_s": 2124.0626891052634,
+          "trigger_onset_time_s": 2124.0626891052634,
+          "onset_sample_version": 1,
+          "onset_sample": [
+            2124062057,
+            6005,
+            2,
+            20
+          ],
+          "threshold_g": 1.75,
+          "onset_g": 1.8128017358526485,
+          "impact_peak_g": 1.8128017358526485,
+          "direction": 0,
+          "polarity_policy": "absolute_after_reference_subtraction_v1",
+          "reference_signal_quality": {
+            "amplitude_limited": false,
+            "excess_amplitude_unknown": false,
+            "peak_semantics": "reported_sensor_derived",
+            "signal_scope": "stationary_reference",
+            "native_clip_decode": null,
+            "clipped_axis_values": 0,
+            "clipped_axis_counts": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "range_limit_axis_values": 0,
+            "range_limit_axis_counts": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "impact_metric": "selected_axis",
+          "homing_speed_mm_s": 60.0,
+          "homing_accel_mm_s2": 5000.0,
+          "attempt_count": 1,
+          "onset_sample_matches": 1,
+          "onset_sample_index": 5252,
+          "amplitude_limited": false,
+          "excess_amplitude_unknown": false,
+          "peak_semantics": "reported_sensor_derived",
+          "signal_scope": "capture",
+          "native_clip_decode": null,
+          "clipped_axis_values": 0,
+          "clipped_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "range_limit_axis_values": 0,
+          "range_limit_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "raw_rows_received": 5280,
+        "raw_rows_retained": 5280,
+        "raw_rows_omitted": 0,
+        "invalid_rows": 0,
+        "retention": "first reference prefix and last impact tail; original sample indices; no averaging",
+        "reserved_home_row_budget": 19608,
+        "retained_sample_ranges": [
+          [
+            0,
+            5280
+          ]
+        ],
+        "omitted_sample_ranges": [],
+        "raw_units": "print_time seconds, machine-axis g including gravity/bias",
+        "source": "owner.stop_capture before workflow validation",
+        "truncation": false
+      },
+      "batches_observed": 635,
+      "batches_retained": 512,
+      "batches_omitted": 123,
+      "expected_travel_mm": 175.0,
+      "raw_ranges": [
+        [
+          0,
+          5280
+        ]
+      ],
+      "quality": "early",
+      "record": {
+        "axis": "y",
+        "pass": 1,
+        "result": "impact",
+        "threshold_g": 1.75,
+        "impact_metric": "selected_axis",
+        "physical_position_verified": false,
+        "direction": 0,
+        "polarity_policy": "absolute_after_reference_subtraction_v1",
+        "reference_signal_quality": {
+          "amplitude_limited": false,
+          "excess_amplitude_unknown": false,
+          "peak_semantics": "reported_sensor_derived",
+          "signal_scope": "stationary_reference",
+          "native_clip_decode": null,
+          "clipped_axis_values": 0,
+          "clipped_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "range_limit_axis_values": 0,
+          "range_limit_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "onset_g": 1.8128017358526485,
+        "impact_sign": 0,
+        "impact_peak_g": 1.8128017358526485,
+        "noise_pos_g": 1.19,
+        "noise_neg_g": 1.54,
+        "noise_g": 1.54,
+        "velocity_mm_s": 43.6,
+        "moving": true,
+        "motion_seen": true,
+        "arm_time_s": 2123.0163291944446,
+        "onset_time_s": 2124.0626891052634,
+        "onset_sample": [
+          2124062057,
+          6005,
+          2,
+          20
+        ],
+        "start_position_mm": -182.5,
+        "expected_travel_mm": 532.5,
+        "backend": "klipper_batch",
+        "trigger_after_arm_s": 1.0464,
+        "amplitude_limited": false,
+        "excess_amplitude_unknown": false,
+        "peak_semantics": "reported_sensor_derived",
+        "signal_scope": "capture",
+        "native_clip_decode": null,
+        "clipped_axis_values": 0,
+        "clipped_axis_counts": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "range_limit_axis_values": 0,
+        "range_limit_axis_counts": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "motion_proof": {
+          "result": "proved",
+          "method": "raw_integral",
+          "backend": "klipper_batch",
+          "gap": false,
+          "overflow": false,
+          "effective_speed_mm_s": 60.0,
+          "effective_accel_mm_s2": 5000.0,
+          "noise_bound_xyz_g": null,
+          "arm_time_s": 2123.016329,
+          "sample_time_s": 2124.061741,
+          "evaluated_sample_time_s": 2123.063002,
+          "deadline_time_s": 2123.123329,
+          "request_time_s": 2124.070632,
+          "first_sample_after_arm_ms": 0.212806,
+          "first_step_after_arm_ms": null,
+          "step_epoch_precision_ms": null,
+          "sample_after_arm_ms": 1045.411806,
+          "evaluated_sample_after_arm_ms": 46.672806,
+          "deadline_after_arm_ms": 107.0,
+          "request_after_arm_ms": 1054.30255,
+          "sample_age_at_request_ms": 8.890744,
+          "raw_speed_mm_s": 55.571834,
+          "lower_speed_mm_s": 55.571834,
+          "upper_speed_mm_s": 55.571834,
+          "full_arm_peak_mm_s": 0.0,
+          "full_arm_peak_after_arm_ms": null,
+          "step_epoch_peak_mm_s": null,
+          "commanded_speed_mm_s": 31.25,
+          "command_eligible": true,
+          "interval_start_after_arm_ms": null,
+          "interval_end_after_arm_ms": null,
+          "history_samples": null,
+          "history_capacity": null,
+          "scan_comparisons": null,
+          "scan_budget_per_event": null,
+          "step_history_error": null
+        },
+        "trigger_position_mm": {
+          "stepper_y": 142.8125,
+          "stepper_x": -72.2875
+        },
+        "travel_mm": 61.013,
+        "travel_mm_exact": 61.0125,
+        "trigger_travel_mm_signed": 61.0125,
+        "halt_travel_mm_signed": 61.487500000000004,
+        "run_id": "422837f359494894a27c5199cfea291f",
+        "workflow_attempt": 1,
+        "workflow_threshold_g": 1.75,
+        "workflow_phase": "discovery",
+        "accuracy_sample": 0,
+        "capture_valid": true,
+        "trigger_onset_time_s": 2124.0626891052634,
+        "capture_onset_sample_index": 5252,
+        "capture_clock_shift_s": 0.0,
+        "configured_homing_speed_mm_s": 60.0,
+        "homing_speed_mm_s": 60.0,
+        "homing_accel_mm_s2": 5000.0
+      },
+      "error": "accel_homing: trigger at 61.01 mm is materially short of expected center travel 175.00 mm; troubleshoot stopped without automatic return or recalibration; manually recenter before another run",
+      "after": {
+        "host_monotonic_s": 6288.2929609,
+        "logical_commanded_position_mm": [
+          175.0,
+          350.475,
+          10.0,
+          0.0
+        ],
+        "kinematic_limits": [
+          [
+            1.0,
+            -1.0
+          ],
+          [
+            -5.0,
+            355.0
+          ],
+          [
+            1.0,
+            -1.0
+          ]
+        ],
+        "kinematic_status": {
+          "homed_axes": "y",
+          "axis_minimum": [
+            0.0,
+            -5.0,
+            -5.0,
+            0
+          ],
+          "axis_maximum": [
+            350.0,
+            355.0,
+            330.0,
+            0
+          ]
+        },
+        "toolhead_status": {
+          "homed_axes": "y",
+          "axis_minimum": [
+            0.0,
+            -5.0,
+            -5.0,
+            0
+          ],
+          "axis_maximum": [
+            350.0,
+            355.0,
+            330.0,
+            0
+          ],
+          "print_time": 2124.32167555,
+          "stalls": 0,
+          "estimated_print_time": 2124.4983055944444,
+          "extruder": "extruder",
+          "position": [
+            175.0,
+            350.475,
+            10.0,
+            0.0
+          ],
+          "max_velocity": 600.0,
+          "max_accel": 30000.0,
+          "minimum_cruise_ratio": 0.5,
+          "square_corner_velocity": 5.0,
+          "extra_axes": {
+            "extruder": 3
+          }
+        },
+        "max_velocity_and_acceleration": [
+          600.0,
+          30000.0
+        ],
+        "backend_cached_status": {
+          "type": "klipper_batch",
+          "sensor": "adxl345",
+          "requested_interval_s": 0.005,
+          "max_sample_age_s": null,
+          "sample_age_limit_enforced": false,
+          "configured_max_sample_age_s": 0.07,
+          "receipt_timeout_s": 0.05,
+          "stream_start_time_s": 2122.1295778666668,
+          "last_sample_age_s": 0.004653994444197451,
+          "observed_rate_hz": 3164.556961918999,
+          "max_homing_speed": null,
+          "fault": null,
+          "max_report_travel_mm": null,
+          "startup_motion_request_limit_mm": null,
+          "latency_guaranteed": false,
+          "startup_motion_evaluated_speed_mm_s": 600.0,
+          "startup_motion_timeout_s": 0.21500000000000002,
+          "startup_motion_request_travel_mm": 94.80000000000001
+        },
+        "steppers": [
+          {
+            "name": "stepper_x",
+            "mcu_position_steps": -5745,
+            "commanded_position_mm": 525.4749999999999,
+            "step_distance_mm": 0.0125
+          },
+          {
+            "name": "stepper_y",
+            "mcu_position_steps": 11387,
+            "commanded_position_mm": -175.47499999999997,
+            "step_distance_mm": 0.0125
+          },
+          {
+            "name": "stepper_z",
+            "mcu_position_steps": 32000,
+            "commanded_position_mm": 10.0,
+            "step_distance_mm": 0.00125
+          },
+          {
+            "name": "stepper_z1",
+            "mcu_position_steps": 32000,
+            "commanded_position_mm": 10.0,
+            "step_distance_mm": 0.00125
+          },
+          {
+            "name": "stepper_z2",
+            "mcu_position_steps": 32000,
+            "commanded_position_mm": 10.0,
+            "step_distance_mm": 0.00125
+          },
+          {
+            "name": "stepper_z3",
+            "mcu_position_steps": 32000,
+            "commanded_position_mm": 10.0,
+            "step_distance_mm": 0.00125
+          }
+        ],
+        "cached_mcu_tmc": {
+          "mcu": {
+            "status": {
+              "mcu_version": "v0.12.0-718-g1b6e2049",
+              "mcu_build_versions": "gcc: (15:12.2.rel1-1) 12.2.1 20221205 binutils: (2.40-2+18+b1) 2.40",
+              "mcu_constants": {
+                "ADC_MAX": 4095,
+                "BUS_PINS_i2c1": "PB6,PB7",
+                "BUS_PINS_i2c1a": "PB8,PB9",
+                "BUS_PINS_i2c2": "PB10,PB11",
+                "BUS_PINS_i2c3": "PA8,PC9",
+                "BUS_PINS_sdio": "PC12,PD2,PC8,PC9,PC10,PC11",
+                "BUS_PINS_spi1": "PA6,PA7,PA5",
+                "BUS_PINS_spi1a": "PB4,PB5,PB3",
+                "BUS_PINS_spi2": "PB14,PB15,PB13",
+                "BUS_PINS_spi2a": "PC2,PC3,PB10",
+                "BUS_PINS_spi3": "PB4,PB5,PB3",
+                "BUS_PINS_spi3a": "PC11,PC12,PC10",
+                "BUS_PINS_spi4": "PE13,PE14,PE12",
+                "CLOCK_FREQ": 180000000,
+                "MCU": "stm32f446xx",
+                "PWM_MAX": 257,
+                "RESERVE_PINS_USB": "PA11,PA12",
+                "RESERVE_PINS_crystal": "PH0,PH1",
+                "STATS_SUMSQ_BASE": 256,
+                "STEPPER_STEP_BOTH_EDGE": 1
+              },
+              "last_stats": {
+                "mcu_awake": 0.004,
+                "mcu_task_avg": 1.6e-05,
+                "mcu_task_stddev": 2.2e-05,
+                "bytes_write": 265223,
+                "bytes_read": 299767,
+                "bytes_retransmit": 9,
+                "bytes_invalid": 0,
+                "send_seq": 13453,
+                "receive_seq": 13453,
+                "retransmit_seq": 2,
+                "srtt": 0.0,
+                "rttvar": 0.0,
+                "rto": 0.025,
+                "ready_bytes": 22,
+                "upcoming_bytes": 0,
+                "freq": 179999119
+              }
+            },
+            "stats": [
+              false,
+              "mcu: mcu_awake=0.004 mcu_task_avg=0.000016 mcu_task_stddev=0.000022 bytes_write=265525 bytes_read=300054 bytes_retransmit=9 bytes_invalid=0 send_seq=13474 receive_seq=13474 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=179999119"
+            ]
+          },
+          "mcu nhk": {
+            "status": {
+              "mcu_version": "v0.12.0-317-gb89d5523",
+              "mcu_build_versions": "gcc: (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision 273027] binutils: (2.34-4+rpi1+14) 2.34",
+              "mcu_constants": {
+                "ADC_MAX": 4095,
+                "BUS_PINS_i2c0a": "gpio0,gpio1",
+                "BUS_PINS_i2c0b": "gpio4,gpio5",
+                "BUS_PINS_i2c0c": "gpio8,gpio9",
+                "BUS_PINS_i2c0d": "gpio12,gpio13",
+                "BUS_PINS_i2c0e": "gpio16,gpio17",
+                "BUS_PINS_i2c0f": "gpio20,gpio21",
+                "BUS_PINS_i2c0g": "gpio24,gpio25",
+                "BUS_PINS_i2c0h": "gpio28,gpio29",
+                "BUS_PINS_i2c1a": "gpio2,gpio3",
+                "BUS_PINS_i2c1b": "gpio6,gpio7",
+                "BUS_PINS_i2c1c": "gpio10,gpio11",
+                "BUS_PINS_i2c1d": "gpio14,gpio15",
+                "BUS_PINS_i2c1e": "gpio18,gpio19",
+                "BUS_PINS_i2c1f": "gpio22,gpio23",
+                "BUS_PINS_i2c1g": "gpio26,gpio27",
+                "BUS_PINS_spi0a": "gpio0,gpio3,gpio2",
+                "BUS_PINS_spi0b": "gpio4,gpio7,gpio6",
+                "BUS_PINS_spi0c": "gpio16,gpio19,gpio18",
+                "BUS_PINS_spi0d": "gpio20,gpio23,gpio22",
+                "BUS_PINS_spi1a": "gpio8,gpio11,gpio10",
+                "BUS_PINS_spi1b": "gpio12,gpio15,gpio14",
+                "BUS_PINS_spi1c": "gpio24,gpio27,gpio26",
+                "CLOCK_FREQ": 12000000,
+                "INITIAL_PINS": "!gpio8",
+                "MCU": "rp2040",
+                "PWM_MAX": 255,
+                "STATS_SUMSQ_BASE": 256,
+                "STEPPER_BOTH_EDGE": 1
+              },
+              "last_stats": {
+                "mcu_awake": 0.001,
+                "mcu_task_avg": 5e-06,
+                "mcu_task_stddev": 4e-06,
+                "bytes_write": 14059,
+                "bytes_read": 185061,
+                "bytes_retransmit": 9,
+                "bytes_invalid": 0,
+                "send_seq": 2257,
+                "receive_seq": 2257,
+                "retransmit_seq": 2,
+                "srtt": 0.0,
+                "rttvar": 0.0,
+                "rto": 0.025,
+                "ready_bytes": 0,
+                "upcoming_bytes": 0,
+                "freq": 11999805,
+                "adj": 11999870
+              }
+            },
+            "stats": [
+              false,
+              "nhk: mcu_awake=0.001 mcu_task_avg=0.000005 mcu_task_stddev=0.000004 bytes_write=14059 bytes_read=185108 bytes_retransmit=9 bytes_invalid=0 send_seq=2257 receive_seq=2257 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=11999805 adj=11999868"
+            ]
+          },
+          "mcu cartographer": {
+            "status": {
+              "mcu_version": "Cartographer HT 5.1.0",
+              "mcu_build_versions": "",
+              "mcu_constants": {
+                "ADC_MAX": 4095,
+                "BUS_PINS_i2c1_PB8_PB7": "PB8,PB7",
+                "BUS_PINS_i2c2_PA9_PA8": "PA9,PA8",
+                "BUS_PINS_spi1": "PA6,PA7,PA5",
+                "CARTOGRAPHER_ADC_SMOOTH_COUNT": 16,
+                "CLOCK_FREQ": 170000000,
+                "INITIAL_PINS": "!PA3",
+                "MCU": "stm32g431xx",
+                "PWM_MAX": 2,
+                "RESERVE_PINS_USB": "PA11,PA12",
+                "RESERVE_PINS_crystal": "PF0,PF1",
+                "STATS_SUMSQ_BASE": 256,
+                "STEPPER_BOTH_EDGE": 1
+              },
+              "last_stats": {
+                "mcu_awake": 0.054,
+                "mcu_task_avg": 2e-05,
+                "mcu_task_stddev": 0.000117,
+                "bytes_write": 324863,
+                "bytes_read": 6028972,
+                "bytes_retransmit": 0,
+                "bytes_invalid": 0,
+                "send_seq": 46185,
+                "receive_seq": 46185,
+                "retransmit_seq": 0,
+                "srtt": 0.0,
+                "rttvar": 0.0,
+                "rto": 0.025,
+                "ready_bytes": 0,
+                "upcoming_bytes": 0,
+                "freq": 169998784,
+                "adj": 169999595
+              }
+            },
+            "stats": [
+              false,
+              "cartographer: mcu_awake=0.054 mcu_task_avg=0.000020 mcu_task_stddev=0.000117 bytes_write=325073 bytes_read=6032413 bytes_retransmit=0 bytes_invalid=0 send_seq=46214 receive_seq=46214 retransmit_seq=0 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=169998784 adj=169999493"
+            ]
+          },
+          "tmc_uart": {
+            "status": {
+              "unavailable": "get_status"
+            }
+          },
+          "tmc2209 extruder": {
+            "status": {
+              "mcu_phase_offset": 1,
+              "phase_offset_position": 0.0013599999999999999,
+              "run_current": 0.5966213466261493,
+              "hold_current": 0.5966213466261493,
+              "drv_status": null,
+              "temperature": null
+            }
+          },
+          "tmc5160 stepper_x": {
+            "status": {
+              "mcu_phase_offset": 51,
+              "phase_offset_position": 597.925,
+              "run_current": 1.7475112899636294,
+              "hold_current": 1.7475112899636294,
+              "drv_status": {
+                "sg_result": 22,
+                "cs_actual": 31
+              },
+              "temperature": null
+            }
+          },
+          "tmc5160 stepper_y": {
+            "status": {
+              "mcu_phase_offset": 17,
+              "phase_offset_position": -317.6,
+              "run_current": 1.7475112899636294,
+              "hold_current": 1.7475112899636294,
+              "drv_status": {
+                "sg_result": 24,
+                "cs_actual": 31
+              },
+              "temperature": null
+            }
+          },
+          "tmc2209 stepper_z": {
+            "status": {
+              "mcu_phase_offset": 1,
+              "phase_offset_position": -29.99875,
+              "run_current": 0.7954951288348658,
+              "hold_current": 0.7954951288348658,
+              "drv_status": null,
+              "temperature": null
+            }
+          },
+          "tmc2209 stepper_z1": {
+            "status": {
+              "mcu_phase_offset": 127,
+              "phase_offset_position": -29.84125,
+              "run_current": 0.7954951288348658,
+              "hold_current": 0.7954951288348658,
+              "drv_status": null,
+              "temperature": null
+            }
+          },
+          "tmc2209 stepper_z2": {
+            "status": {
+              "mcu_phase_offset": 1,
+              "phase_offset_position": -29.99875,
+              "run_current": 0.7954951288348658,
+              "hold_current": 0.7954951288348658,
+              "drv_status": null,
+              "temperature": null
+            }
+          },
+          "tmc2209 stepper_z3": {
+            "status": {
+              "mcu_phase_offset": 127,
+              "phase_offset_position": -29.84125,
+              "run_current": 0.7954951288348658,
+              "hold_current": 0.7954951288348658,
+              "drv_status": null,
+              "temperature": null
+            }
+          }
+        },
+        "runtime": {
+          "threshold_g": {
+            "x": 2.5,
+            "y": 1.75
+          },
+          "impact_sign": {
+            "x": 0,
+            "y": 0
+          },
+          "homing_accel": 5000.0,
+          "back_off_dist": 0.0,
+          "saved_accel": null,
+          "operation_generation": 7,
+          "sensor_fault": null,
+          "scale": {
+            "name": "normalized_g",
+            "id": null,
+            "scale": 1.0
+          },
+          "session_scale": {
+            "name": "normalized_g",
+            "id": null,
+            "scale": 1.0
+          },
+          "full_scale_g": 16.0,
+          "sensor_name": "adxl345",
+          "baseline_status": {
+            "axis": "y",
+            "phase": "before_arm",
+            "result": "ready",
+            "quiet_range_enforced": true,
+            "motion_proof_noise_bound_g": null,
+            "quiet_samples": 318,
+            "quiet_span_ms": 100.167,
+            "required_samples": 50,
+            "required_span_ms": 100.0,
+            "best_quiet_samples": 318,
+            "best_quiet_span_ms": 100.167,
+            "best_quiet_peak_to_peak_g": {
+              "x": 0.128316,
+              "y": 0.143412,
+              "z": 0.1953
+            },
+            "observed_peak_to_peak_g": {
+              "x": 0.128316,
+              "y": 0.143412,
+              "z": 0.1953
+            },
+            "quiet_limit_g": 0.7,
+            "impact_threshold_g": 1.75,
+            "accepted_samples": 322,
+            "pre_cutoff_samples": 18,
+            "quiet_resets": 0,
+            "sample_age_ms": 7.237,
+            "max_sample_age_ms": null,
+            "sample_age_limit_enforced": false,
+            "configured_max_sample_age_ms": 70.0,
+            "last_receipt_time_s": 6286.557056067,
+            "receipt_timeout_ms": 50.0,
+            "oldest_batch_age_ms": 8.758,
+            "newest_batch_age_ms": 2.755
+          },
+          "baseline_time": 0.1,
+          "baseline_batches": 25,
+          "stream_timeout": 0.05,
+          "stream_on": false,
+          "native_stream_generation": 0,
+          "last": {
+            "x": {
+              "axis": "x",
+              "pass": 1,
+              "result": "impact",
+              "threshold_g": 2.5,
+              "impact_metric": "selected_axis",
+              "physical_position_verified": false,
+              "direction": 0,
+              "polarity_policy": "absolute_after_reference_subtraction_v1",
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "onset_g": 10.1,
+              "impact_sign": 0,
+              "impact_peak_g": 10.1,
+              "noise_pos_g": 1.48,
+              "noise_neg_g": 1.28,
+              "noise_g": 1.48,
+              "velocity_mm_s": 34.8,
+              "moving": true,
+              "motion_seen": true,
+              "arm_time_s": 2105.7919049444445,
+              "onset_time_s": 2106.4035106842107,
+              "onset_sample": [
+                2106401615,
+                6003,
+                6,
+                20
+              ],
+              "start_position_mm": -175.0,
+              "expected_travel_mm": 525.0,
+              "backend": "klipper_batch",
+              "trigger_after_arm_s": 0.6116,
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "armed_response",
+              "native_clip_decode": null,
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "motion_proof": {
+                "result": "proved",
+                "method": "raw_integral",
+                "backend": "klipper_batch",
+                "gap": false,
+                "overflow": false,
+                "effective_speed_mm_s": 60.0,
+                "effective_accel_mm_s2": 5000.0,
+                "noise_bound_xyz_g": null,
+                "arm_time_s": 2105.791905,
+                "sample_time_s": 2106.401299,
+                "evaluated_sample_time_s": 2105.841864,
+                "deadline_time_s": 2105.898905,
+                "request_time_s": 2106.410382,
+                "first_sample_after_arm_ms": 0.017056,
+                "first_step_after_arm_ms": null,
+                "step_epoch_precision_ms": null,
+                "sample_after_arm_ms": 609.394056,
+                "evaluated_sample_after_arm_ms": 49.959056,
+                "deadline_after_arm_ms": 107.0,
+                "request_after_arm_ms": 618.477144,
+                "sample_age_at_request_ms": 9.083089,
+                "raw_speed_mm_s": 48.514014,
+                "lower_speed_mm_s": 48.514014,
+                "upper_speed_mm_s": 48.514014,
+                "full_arm_peak_mm_s": 0.0,
+                "full_arm_peak_after_arm_ms": null,
+                "step_epoch_peak_mm_s": null,
+                "commanded_speed_mm_s": 40.625,
+                "command_eligible": true,
+                "interval_start_after_arm_ms": null,
+                "interval_end_after_arm_ms": null,
+                "history_samples": null,
+                "history_capacity": null,
+                "scan_comparisons": null,
+                "scan_budget_per_event": null,
+                "step_history_error": null
+              },
+              "trigger_position_mm": {
+                "stepper_x": 41.675,
+                "stepper_y": 378.85
+              },
+              "travel_mm": 34.875,
+              "travel_mm_exact": 34.875,
+              "trigger_travel_mm_signed": 34.875,
+              "halt_travel_mm_signed": 35.2875
+            },
+            "y": {
+              "axis": "y",
+              "pass": 1,
+              "result": "impact",
+              "threshold_g": 1.75,
+              "impact_metric": "selected_axis",
+              "physical_position_verified": false,
+              "direction": 0,
+              "polarity_policy": "absolute_after_reference_subtraction_v1",
+              "reference_signal_quality": {
+                "amplitude_limited": false,
+                "excess_amplitude_unknown": false,
+                "peak_semantics": "reported_sensor_derived",
+                "signal_scope": "stationary_reference",
+                "native_clip_decode": null,
+                "clipped_axis_values": 0,
+                "clipped_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "range_limit_axis_values": 0,
+                "range_limit_axis_counts": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "onset_g": 1.81,
+              "impact_sign": 0,
+              "impact_peak_g": 1.81,
+              "noise_pos_g": 1.19,
+              "noise_neg_g": 1.54,
+              "noise_g": 1.54,
+              "velocity_mm_s": 43.6,
+              "moving": true,
+              "motion_seen": true,
+              "arm_time_s": 2123.0163291944446,
+              "onset_time_s": 2124.0626891052634,
+              "onset_sample": [
+                2124062057,
+                6005,
+                2,
+                20
+              ],
+              "start_position_mm": -182.5,
+              "expected_travel_mm": 532.5,
+              "backend": "klipper_batch",
+              "trigger_after_arm_s": 1.0464,
+              "amplitude_limited": false,
+              "excess_amplitude_unknown": false,
+              "peak_semantics": "reported_sensor_derived",
+              "signal_scope": "armed_response",
+              "native_clip_decode": null,
+              "clipped_axis_values": 0,
+              "clipped_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "range_limit_axis_values": 0,
+              "range_limit_axis_counts": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "motion_proof": {
+                "result": "proved",
+                "method": "raw_integral",
+                "backend": "klipper_batch",
+                "gap": false,
+                "overflow": false,
+                "effective_speed_mm_s": 60.0,
+                "effective_accel_mm_s2": 5000.0,
+                "noise_bound_xyz_g": null,
+                "arm_time_s": 2123.016329,
+                "sample_time_s": 2124.061741,
+                "evaluated_sample_time_s": 2123.063002,
+                "deadline_time_s": 2123.123329,
+                "request_time_s": 2124.070632,
+                "first_sample_after_arm_ms": 0.212806,
+                "first_step_after_arm_ms": null,
+                "step_epoch_precision_ms": null,
+                "sample_after_arm_ms": 1045.411806,
+                "evaluated_sample_after_arm_ms": 46.672806,
+                "deadline_after_arm_ms": 107.0,
+                "request_after_arm_ms": 1054.30255,
+                "sample_age_at_request_ms": 8.890744,
+                "raw_speed_mm_s": 55.571834,
+                "lower_speed_mm_s": 55.571834,
+                "upper_speed_mm_s": 55.571834,
+                "full_arm_peak_mm_s": 0.0,
+                "full_arm_peak_after_arm_ms": null,
+                "step_epoch_peak_mm_s": null,
+                "commanded_speed_mm_s": 31.25,
+                "command_eligible": true,
+                "interval_start_after_arm_ms": null,
+                "interval_end_after_arm_ms": null,
+                "history_samples": null,
+                "history_capacity": null,
+                "scan_comparisons": null,
+                "scan_budget_per_event": null,
+                "step_history_error": null
+              },
+              "trigger_position_mm": {
+                "stepper_y": 142.8125,
+                "stepper_x": -72.2875
+              },
+              "travel_mm": 61.013,
+              "travel_mm_exact": 61.0125,
+              "trigger_travel_mm_signed": 61.0125,
+              "halt_travel_mm_signed": 61.487500000000004
+            }
+          }
+        }
+      },
+      "stop_timing": {
+        "onset_to_host_dispatch_estimate_s": 0.007905489181212033,
+        "domain": "main_mcu_print_time",
+        "hardware_receipt_or_halt_time_available": false,
+        "reason": null,
+        "onset_print_time_s": 2124.0626891052634,
+        "host_dispatch_estimated_print_time_s": 2124.0705945944446,
+        "onset_provenance": "configured_full_precision_sample_times",
+        "dispatch_returned": true
+      },
+      "packet_retention": {
+        "policy": "first prefix and rolling last tail; omitted middle",
+        "prefix_limit": 128,
+        "tail_limit": 384,
+        "retained_sequence_ranges": [
+          [
+            1,
+            128
+          ],
+          [
+            252,
+            635
+          ]
+        ]
+      },
+      "raw_file": "home-001-y.csv.gz"
+    }
+  ],
+  "events": [
+    {
+      "kind": "workflow_start",
+      "host_observed_monotonic_s": 6285.915901549,
+      "fields": {
+        "axes": [
+          "y"
+        ],
+        "samples_requested": 50,
+        "thresholds_g": {
+          "x": 2.5,
+          "y": 1.75
+        },
+        "speeds_mm_s": {
+          "y": 60.0
+        },
+        "homing_accel_mm_s2": 5000.0
+      },
+      "home_id": null,
+      "attribution": "synchronous_workflow_observation"
+    },
+    {
+      "kind": "home_begin",
+      "host_observed_monotonic_s": 6285.919904234,
+      "fields": {
+        "axis": "y",
+        "sample": 0
+      },
+      "home_id": 1,
+      "attribution": "synchronous_workflow_observation"
+    },
+    {
+      "kind": "arm",
+      "host_observed_monotonic_s": 6286.563349919,
+      "fields": {
+        "axis": "y",
+        "pass_no": 1,
+        "host_monotonic_s": 6286.563297734,
+        "arm_print_time_s": 2123.0163291944446,
+        "deadline_print_time_s": 2129.7783291944447,
+        "arm_sensor_clock": 2123016329,
+        "sensor_name": "adxl345",
+        "backend": "klipper_batch",
+        "baseline_raw": [
+          -26.251849058142962,
+          1.2817358526480584,
+          953.5061886785396
+        ],
+        "count_g": 0.001,
+        "threshold_raw": 1750.0,
+        "threshold_g": 1.75,
+        "raw_axis_index": 1,
+        "map_sign": 1,
+        "vector_mode": false,
+        "speed_mm_s": 60.0,
+        "accel_mm_s2": 5000.0,
+        "start_position_mm": [
+          175.0,
+          -182.5,
+          10.0,
+          0.0
+        ],
+        "axis_start_position_mm": -182.5,
+        "proof_start_step_counts": null,
+        "reference_signal_quality": {
+          "amplitude_limited": false,
+          "excess_amplitude_unknown": false,
+          "peak_semantics": "reported_sensor_derived",
+          "signal_scope": "stationary_reference",
+          "native_clip_decode": null,
+          "clipped_axis_values": 0,
+          "clipped_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "range_limit_axis_values": 0,
+          "range_limit_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      "home_id": 1,
+      "attribution": "arm_print_time"
+    },
+    {
+      "kind": "stop_request",
+      "host_observed_monotonic_s": 6287.865338122,
+      "fields": {
+        "axis": "y",
+        "pass_no": 1,
+        "reason": "impact",
+        "result_code": 1,
+        "arm_print_time_s": 2123.0163291944446,
+        "arm_sensor_clock": 2123016329,
+        "request_before_host_monotonic_s": 6287.865247807,
+        "request_after_host_monotonic_s": 6287.865281696,
+        "request_estimated_print_time_s": 2124.0705945944446,
+        "dispatch_returned": true,
+        "onset_print_time_s": 2124.0626891052634,
+        "onset_sample": [
+          2124062057,
+          6005,
+          2,
+          20
+        ],
+        "onset_batch": [
+          2124062057,
+          6005,
+          2,
+          20
+        ],
+        "timestamp_provenance": "host_stop_dispatch; local_main_mcu_clocksync_estimate",
+        "mcu_halt_print_time_s": null
+      },
+      "home_id": 1,
+      "attribution": "arm_print_time"
+    },
+    {
+      "kind": "threshold_crossing",
+      "host_observed_monotonic_s": 6287.865431085,
+      "fields": {
+        "axis": "y",
+        "pass_no": 1,
+        "arm_print_time_s": 2123.0163291944446,
+        "arm_sensor_clock": 2123016329,
+        "onset_print_time_s": 2124.0626891052634,
+        "onset_sample": [
+          2124062057,
+          6005,
+          2,
+          20
+        ],
+        "onset_batch": [
+          2124062057,
+          6005,
+          2,
+          20
+        ],
+        "source_sample_count": 20,
+        "threshold_g": 1.75,
+        "onset_g": 1.8128017358526485,
+        "vector_mode": false,
+        "sample_time_provenance": "configured_full_precision_sample_times"
+      },
+      "home_id": 1,
+      "attribution": "arm_print_time"
+    },
+    {
+      "kind": "endstop_result",
+      "host_observed_monotonic_s": 6287.871458659,
+      "fields": {
+        "axis": "y",
+        "pass_no": 1,
+        "arm_print_time_s": 2123.0163291944446,
+        "result_code": 1,
+        "host_monotonic_s": 6287.871444029
+      },
+      "home_id": 1,
+      "attribution": "arm_print_time"
+    },
+    {
+      "kind": "home_end",
+      "host_observed_monotonic_s": 6287.872526733,
+      "fields": {
+        "axis": "y",
+        "pass_no": 1,
+        "arm_print_time_s": 2123.0163291944446,
+        "arm_sensor_clock": 2123016329,
+        "callback_host_monotonic_s": 6287.872412066,
+        "result": "impact",
+        "steppers": [
+          {
+            "stepper": "stepper_y",
+            "step_distance_mm": 0.0125,
+            "start_steps": 16306,
+            "trigger_steps": 11425,
+            "halt_steps": 11387,
+            "start_mm": 203.82500000000002,
+            "trigger_mm": 142.8125,
+            "halt_mm": 142.3375
+          },
+          {
+            "stepper": "stepper_x",
+            "step_distance_mm": 0.0125,
+            "start_steps": -10664,
+            "trigger_steps": -5783,
+            "halt_steps": -5745,
+            "start_mm": -133.3,
+            "trigger_mm": -72.28750000000001,
+            "halt_mm": -71.8125
+          }
+        ],
+        "trigger_travel_mm_signed": 61.0125,
+        "halt_travel_mm_signed": 61.487500000000004,
+        "start_position_mm": [
+          175.0,
+          -182.5,
+          10.0,
+          0.0
+        ],
+        "host_observed_position_mm": [
+          175.0,
+          350.475,
+          10.0,
+          0.0
+        ],
+        "position_provenance": "homing_move_end_before_final_coordinate_assignment",
+        "halt_time_provenance": "unavailable; callback_time_is_host_observation_only",
+        "mcu_halt_print_time_s": null
+      },
+      "home_id": 1,
+      "attribution": "arm_print_time"
+    },
+    {
+      "kind": "home_observed_end",
+      "host_observed_monotonic_s": 6288.295440955,
+      "fields": {
+        "record": {
+          "axis": "y",
+          "pass": 1,
+          "result": "impact",
+          "threshold_g": 1.75,
+          "impact_metric": "selected_axis",
+          "physical_position_verified": false,
+          "direction": 0,
+          "polarity_policy": "absolute_after_reference_subtraction_v1",
+          "reference_signal_quality": {
+            "amplitude_limited": false,
+            "excess_amplitude_unknown": false,
+            "peak_semantics": "reported_sensor_derived",
+            "signal_scope": "stationary_reference",
+            "native_clip_decode": null,
+            "clipped_axis_values": 0,
+            "clipped_axis_counts": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "range_limit_axis_values": 0,
+            "range_limit_axis_counts": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "onset_g": 1.8128017358526485,
+          "impact_sign": 0,
+          "impact_peak_g": 1.8128017358526485,
+          "noise_pos_g": 1.19,
+          "noise_neg_g": 1.54,
+          "noise_g": 1.54,
+          "velocity_mm_s": 43.6,
+          "moving": true,
+          "motion_seen": true,
+          "arm_time_s": 2123.0163291944446,
+          "onset_time_s": 2124.0626891052634,
+          "onset_sample": [
+            2124062057,
+            6005,
+            2,
+            20
+          ],
+          "start_position_mm": -182.5,
+          "expected_travel_mm": 532.5,
+          "backend": "klipper_batch",
+          "trigger_after_arm_s": 1.0464,
+          "amplitude_limited": false,
+          "excess_amplitude_unknown": false,
+          "peak_semantics": "reported_sensor_derived",
+          "signal_scope": "capture",
+          "native_clip_decode": null,
+          "clipped_axis_values": 0,
+          "clipped_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "range_limit_axis_values": 0,
+          "range_limit_axis_counts": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "motion_proof": {
+            "result": "proved",
+            "method": "raw_integral",
+            "backend": "klipper_batch",
+            "gap": false,
+            "overflow": false,
+            "effective_speed_mm_s": 60.0,
+            "effective_accel_mm_s2": 5000.0,
+            "noise_bound_xyz_g": null,
+            "arm_time_s": 2123.016329,
+            "sample_time_s": 2124.061741,
+            "evaluated_sample_time_s": 2123.063002,
+            "deadline_time_s": 2123.123329,
+            "request_time_s": 2124.070632,
+            "first_sample_after_arm_ms": 0.212806,
+            "first_step_after_arm_ms": null,
+            "step_epoch_precision_ms": null,
+            "sample_after_arm_ms": 1045.411806,
+            "evaluated_sample_after_arm_ms": 46.672806,
+            "deadline_after_arm_ms": 107.0,
+            "request_after_arm_ms": 1054.30255,
+            "sample_age_at_request_ms": 8.890744,
+            "raw_speed_mm_s": 55.571834,
+            "lower_speed_mm_s": 55.571834,
+            "upper_speed_mm_s": 55.571834,
+            "full_arm_peak_mm_s": 0.0,
+            "full_arm_peak_after_arm_ms": null,
+            "step_epoch_peak_mm_s": null,
+            "commanded_speed_mm_s": 31.25,
+            "command_eligible": true,
+            "interval_start_after_arm_ms": null,
+            "interval_end_after_arm_ms": null,
+            "history_samples": null,
+            "history_capacity": null,
+            "scan_comparisons": null,
+            "scan_budget_per_event": null,
+            "step_history_error": null
+          },
+          "trigger_position_mm": {
+            "stepper_y": 142.8125,
+            "stepper_x": -72.2875
+          },
+          "travel_mm": 61.013,
+          "travel_mm_exact": 61.0125,
+          "trigger_travel_mm_signed": 61.0125,
+          "halt_travel_mm_signed": 61.487500000000004,
+          "run_id": "422837f359494894a27c5199cfea291f",
+          "workflow_attempt": 1,
+          "workflow_threshold_g": 1.75,
+          "workflow_phase": "discovery",
+          "accuracy_sample": 0,
+          "capture_valid": true,
+          "trigger_onset_time_s": 2124.0626891052634,
+          "capture_onset_sample_index": 5252,
+          "capture_clock_shift_s": 0.0,
+          "configured_homing_speed_mm_s": 60.0,
+          "homing_speed_mm_s": 60.0,
+          "homing_accel_mm_s2": 5000.0
+        },
+        "error": "accel_homing: trigger at 61.01 mm is materially short of expected center travel 175.00 mm; troubleshoot stopped without automatic return or recalibration; manually recenter before another run"
+      },
+      "home_id": 1,
+      "attribution": "synchronous_workflow_observation"
+    },
+    {
+      "kind": "workflow_ending",
+      "host_observed_monotonic_s": 6288.295725807,
+      "fields": {
+        "result": "aborted",
+        "mode": "troubleshoot",
+        "reason": "accel_homing: trigger at 61.01 mm is materially short of expected center travel 175.00 mm; troubleshoot stopped without automatic return or recalibration; manually recenter before another run"
+      },
+      "home_id": 1,
+      "attribution": "synchronous_workflow_observation"
+    },
+    {
+      "kind": "workflow_cleanup_observed",
+      "host_observed_monotonic_s": 6288.801605251,
+      "fields": {
+        "result": "aborted",
+        "cleanup_complete": true
+      },
+      "home_id": 1,
+      "attribution": "synchronous_workflow_observation"
+    }
+  ],
+  "log": {
+    "source": "/home/pjotr/printer_data/logs/klippy.log",
+    "offset": 10046211,
+    "bytes": 3948,
+    "truncated": false,
+    "rotated": false,
+    "startup_metadata_lines": 18,
+    "startup_scan_bytes": 262144
+  },
+  "collector_closed_host_monotonic_s": 6288.80167564,
+  "bounds": {
+    "max_raw_rows": 1000000,
+    "max_home_rows": 200000,
+    "raw_rows_retained": 5280,
+    "max_events": 3000,
+    "events_omitted": 0,
+    "max_batches": 52736,
+    "max_batches_per_home": 512,
+    "batches_retained": 512,
+    "batches_omitted": 123,
+    "observer_errors": 0
+  },
+  "interpretation": [
+    "Commanded positions and step counts are not measured physical carriage positions.",
+    "Host stop dispatch does not establish MCU receipt time.",
+    "Clock domains are named in fields; do not subtract host monotonic from print_time.",
+    "callback_duration_s ends before recorder formatting/append and excludes that observer overhead; it is not full callback occupancy or transport latency.",
+    "Late callbacks holding an old recorder reference after collector_closed_host_monotonic_s are ignored; exported evidence is frozen.",
+    "Discovery is retained and excluded from measured-trial statistics.",
+    "Rejected/partial homes are retained; no automatic recalibration or threshold change.",
+    "Empty CSV cells represent invalid/missing numbers; see capture invalid_rows.",
+    "Charts use impact windows; raw retained CSV rows are not decimated."
+  ],
+  "render": {
+    "result": "complete",
+    "files": [
+      "home-001-y.png",
+      "summary.png"
+    ]
+  }
+}
