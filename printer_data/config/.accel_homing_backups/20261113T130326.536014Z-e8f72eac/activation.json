@@ -1,0 +1,12 @@
+{
+  "config": "/home/pjotr/printer_data/config/printer.cfg",
+  "pid": 7037,
+  "previous_pid": 3358,
+  "repo": "/home/pjotr/klipper",
+  "restart_attempted": true,
+  "service": "klipper.service",
+  "start_time": "77753",
+  "status": "restarted",
+  "updated_utc": "2026-11-13T13:03:27.889231+00:00",
+  "version": 1
+}
